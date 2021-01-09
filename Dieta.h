@@ -7,11 +7,11 @@
 class Dieta
 {
 private: 
-	int _kalorycznoœæ;
+	int _kalorycznosc;
 
 public:
 	Dieta(int k) :
-		_kalorycznoœæ(k) {}
+		_kalorycznosc(k) {}
 
 };
 
