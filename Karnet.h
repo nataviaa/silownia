@@ -12,13 +12,14 @@ class Karnet;
 class Karnet
 {
 private: 
-	bool _zni¿ka_uczniowska;
+	bool _zniÂ¿ka_uczniowska;
 	int _cena;
 public: 
 	
 	Karnet(bool z, int c) :
-		_zni¿ka_uczniowska(z), _cena(c) {}
-	 void kup();
+		_zniÂ¿ka_uczniowska(z), _cena(c) {}
+	 bool getZnizka();
+	 int getCena();
 };
 
 #endif
