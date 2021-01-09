@@ -16,4 +16,13 @@ void Trener::wglad_do_karty_zdrowia(Klient *k) {
 	cout << (k->_unnamed_Karta_zdrowia_)->_masa << endl;
 }
 
+Trener::Trener(string a, string b, int c) {
+	_imie = a;
+	_nazwisko = b;
+	_id = c;
+}
+
+int Trener::getID() {
+	return _id;
+}
 
