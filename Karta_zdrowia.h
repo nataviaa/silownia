@@ -20,10 +20,10 @@ public:
 	string _grupa_krwi;
 	Klient* _unnamed_Klient_;
 	Trener* _unnamed_Trener_;
+	Dietetyk* _unnamed_Dietetyk_;
 
-	 void dodaj_informacje();
-	 void zmien_dane();
 	 Karta_zdrowia(int m, int w, string k, Klient* klient, Trener* trener);
+	 Karta_zdrowia(int m, int w, string k, Klient* klient, Dietetyk* dietetyk);
 	 
 };
 
