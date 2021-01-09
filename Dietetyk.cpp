@@ -12,11 +12,7 @@ Dietetyk::Dietetyk(string a, string b, int id){
 	_nazwisko=b;
 	_id=id;
 }
-void Dietetyk::stwórz_plan_dietetyczny() {
-	throw "Not yet implemented";
-}
-
-void Dietetyk::modyfikuj_plan_dietetyczny() {
-	throw "Not yet implemented";
+int Dietetyk::getID(){
+	return _id;
 }
 
