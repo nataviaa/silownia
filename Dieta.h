@@ -12,6 +12,8 @@ private:
 public:
 	Dieta(int k) :
 		_kalorycznosc(k) {}
+	
+	int get_kalorycznosc();
 
 };
 
