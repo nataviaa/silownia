@@ -1,0 +1,21 @@
+  
+#include "pch.h"
+#include "CppUnitTest.h"
+#include "..//Dieta.h"//podpięcie pliku Dieta.h
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace Test_Dieta
+{
+    TEST_CLASS(Test_Dieta)
+    {
+    public:
+
+        TEST_METHOD(TestKonstruktora)
+        {
+            int cal = 1300;
+            Dieta d(iD);
+            Assert::AreEqual(iD, d._kalorycznosc());
+        }
+    };
+}
