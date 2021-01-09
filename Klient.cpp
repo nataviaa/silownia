@@ -31,6 +31,14 @@ void Klient::set_karnet(Karnet* k) {
 	_unnamed_Karnet = k;
 }
 
+string Klient::get_imie() {
+	return _imie;
+}
+
+Grupa_zajeciowa* Klient::get_grupa() {
+	return _unnamed_Grupa_zajeciowa;
+}
+
 
 
 
