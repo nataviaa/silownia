@@ -1,0 +1,33 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+#include "../silownia_projekt/Klient.cpp"
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace TestKlient
+{
+	TEST_CLASS(TestKlient)
+	{
+	public:
+		
+		TEST_METHOD(TestKonstruktora)
+		{
+			string a = "imie";
+			string b = "nazwisko";
+			int c = 2000;
+
+			Klient k(a, b, c);
+
+			Assert::AreEqual(a, k.get_imie());
+
+		}
+		TEST_METHOD(Test_zapis_do_grupy)
+		{
+			
+			Grupa_zajeciowa g(10.5, 10, 1, 3, "Yoga");
+			Klient k("Iga", "Biel", 1990);
+			k.zapisz_do_grupy(&g);
+			Assert::IsTrue(&g == k.get_grupa());
+		}
+	};
+}
