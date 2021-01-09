@@ -35,12 +35,11 @@ private:
 public: 
 	Klient(string, string, int);
 	Karta_zdrowia* _unnamed_Karta_zdrowia_;
-	void zapisz_do_grupy(Grupa_zajeciowa*);
+	void zapisz_do_grupy(Grupa_zajeciowa*,Klient);
 	void zapisz_do_dietetyka();
 	void zapisz_na_trening();
-
-	Klient uaktualnij_dane(string aImie, string aNazwisko, string aImie_rodzica, string aNazwisko_rodzica, char aNumer_telefonu_rodzica);
-	void dodaj_karte_zdrowia();
+	void uaktualnij_dane(string, string, string, string);
+	void dodaj_karte_zdrowia(Karta_zdrowia);
 	void wglad_w_karte_zdrowia();
 	void set_karnet(Karnet*);
 	Karta_zdrowia* get_karta_zdrowia();
