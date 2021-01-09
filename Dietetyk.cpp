@@ -7,7 +7,12 @@ using namespace std;
 #include "Wizyta_u_dietetyla.h"
 #include "Pracownik.h"
 
-void Dietetyk::stwórz_plan_dietetyczny() {
+Dietetyk::Dietetyk(string a, string b, int id){
+	_imie=a;
+	_nazwisko=b;
+	_id=id;
+}
+void Dietetyk::stwÃ³rz_plan_dietetyczny() {
 	throw "Not yet implemented";
 }
 
