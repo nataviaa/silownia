@@ -27,7 +27,7 @@ public:
 	Trener* _unnamed_Trener_;
 	Grupa_zajeciowa(int g, int l, int s, int d, string rodzaj) :
 		_godzina(g), _liczba_osob(l), _sala(s), _dzien_tygodnia(d), _rodzaj_zajec(rodzaj) {}
-	void dodaj_uczestnika();
+	void dodaj_uczestnika(Klient);
 
 	void usun_uczestnika();
 
