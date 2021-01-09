@@ -1,0 +1,23 @@
+  
+#include "pch.h"
+#include "CppUnitTest.h"
+#include "..//Dietetyk.h"//podpięcie pliku Dietetyk.h
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace Test_Dietetyk
+{
+    TEST_CLASS(Test_Dietetyk)
+    {
+    public:
+
+        TEST_METHOD(TestKonstruktora)
+        {
+            int iD = 123;
+            string a = "Anna";
+            string b = "Annasz";
+            Dietetyk d(a,b,iD);
+            Assert::AreEqual(iD, r._iD());
+        }
+    };
+}
