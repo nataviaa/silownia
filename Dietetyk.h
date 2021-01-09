@@ -7,23 +7,22 @@ using namespace std;
 #define __Dietetyk_h__
 
 #include "Wizyta_u_dietetyla.h"
-#include "Pracownik.h"
 
 class Wizyta_u_dietetyla;
-// class Pracownik;
 class Dietetyk;
 
-class Dietetyk: public Pracownik
+class Dietetyk: 
 {
 
-public: 
+	string _imie;
+	string _nazwisko;
+	int _id;
 	
-	Dietetyk();
+public: 
 	std::vector<Wizyta_u_dietetyla*> _unnamed_Wizyta_u_dietetyla_;
-
-	void stwórz_plan_dietetyczny();
-
-	void modyfikuj_plan_dietetyczny();
+	
+	Dietetyk(string, string, int);
+	
 };
 
 #endif
