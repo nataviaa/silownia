@@ -1,23 +1,31 @@
-  
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "..//Dietetyk.h"//podpięcie pliku Dietetyk.h
+#include "../silownia_projekt/Dietetyk.cpp"
+#include "../silownia_projekt/Karta_zdrowia.cpp"
+#include "../silownia_projekt/Klient.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace Test_Dietetyk
+namespace TestDietetyk
 {
-    TEST_CLASS(Test_Dietetyk)
-    {
-    public:
+	TEST_CLASS(TestDietetyk)
+	{
+	public:
+		
+		TEST_METHOD(TestKonstruktora)
+		{
+			string a = "imie";
+			string b = "nazwisko";
+			int id = 123;
+			Dietetyk d(a, b, id);
+			Assert::AreEqual(id, d.getID());
+		}
 
-        TEST_METHOD(TestKonstruktora)
-        {
-            int iD = 123;
-            string a = "Anna";
-            string b = "Annasz";
-            Dietetyk d(a,b,iD);
-            Assert::AreEqual(iD, r._iD());
-        }
-    };
+		TEST_METHOD(Test_wglad_do_karty_zdrowia)
+		{
+			Klient klient("Jan", "Chlanda", 2000);
+			Dietetyk dietetyk("Eryk", "Czapla", 1996);
+			Karta_zdrowia k1(80, 180, "0-", &klient, &dietetyk);
+		}
+	};
 }
