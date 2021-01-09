@@ -21,9 +21,7 @@ public:
 	Dietetyk();
 	std::vector<Wizyta_u_dietetyla*> _unnamed_Wizyta_u_dietetyla_;
 
-	void stwórz_plan_dietetyczny();
-
-	void modyfikuj_plan_dietetyczny();
+	int getID();
 };
 
 #endif
