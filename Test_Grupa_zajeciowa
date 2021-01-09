@@ -5,9 +5,9 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace std;
 
-namespace TestGrupa_zajeciowa
+namespace Test_Grupa_zajeciowa
 {
-    TEST_CLASS(TestGrupa_zajeciowa_h)
+    TEST_CLASS(Test_Grupa_zajeciowa)
     {
     public:
 
