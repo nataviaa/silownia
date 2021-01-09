@@ -1,23 +1,23 @@
-  
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "..//Karnet.h"//podpięcie pliku Karnet.h
+#include "../silownia_projekt/Karnet.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace Test_Karnet
+namespace TestKarnet
 {
-    TEST_CLASS(Test_Karnet)
-    {
-    public:
-
-        TEST_METHOD(TestKonstruktora)
-        {
-            bool a = false;
-            int b = 80;
-            Karnet k(a,b);
-            Assert::AreEqual(a, r._znizka_uczniowska);
-            Assert::AreEqual(b, r._cena);
-        }
-    };
+	TEST_CLASS(TestKarnet)
+	{
+	public:
+		
+		TEST_METHOD(TestKonstruktora)
+		{
+			bool a = true;
+			int b = 123;
+			Karnet k(a, b);
+			Assert::AreEqual(a, k.getZnizka());
+			Assert::AreEqual(b, k.getCena());
+		}
+		
+	};
 }
