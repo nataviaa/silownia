@@ -18,13 +18,13 @@ class Wizyta_u_dietetyla
 {
 private: 
 	int _dzien;
-	int _godzina_wizyty;
-	int _cena;
-	
-public: 
+	double _godzina_wizyty;
+	int _cena; 
+public:
 	Dietetyk* _unnamed_Dietetyk_;
-	std::vector<Klient*> _unnamed_Klient_;
-
-};
+	Klient* _unnamed_Klient_;
+	Wizyta_u_dietetyka(int, double, int, Dietetyk*,Klient*);
+	int get_dzien();
+	double get_godzina();
 
 #endif
