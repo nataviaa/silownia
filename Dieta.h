@@ -2,16 +2,16 @@
 #ifndef __Dieta_h__
 #define __Dieta_h__
 
-// #include "Unnamed__1.h"
-
 class Dieta
 {
 private: 
-	int _kalorycznoœæ;
+	int _kalorycznosc;
 
 public:
 	Dieta(int k) :
-		_kalorycznoœæ(k) {}
+		_kalorycznoos(k) {}
+	
+	int get_kalorycznosc();
 
 };
 
