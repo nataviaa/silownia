@@ -43,7 +43,10 @@ public:
 	void dodaj_karte_zdrowia();
 	void wglad_w_karte_zdrowia();
 	void set_karnet(Karnet*);
+	
 	Karta_zdrowia* get_karta_zdrowia();
+	string get_imie();
+	Grupa_zajeciowa* get_grupa();
 };
 
 #endif
