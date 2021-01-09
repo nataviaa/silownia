@@ -22,7 +22,7 @@ class Trener;
 class Trener: public Pracownik
 {
 private:
-	//int[70] _dostepnosc_godzinowa;
+	int* _dostepnosc_godzinowa;//?
 
 public: 
 	//std::vector<Karta_zdrowia*> _unnamed_Karta_zdrowia_;
@@ -32,6 +32,10 @@ public:
 	std::vector<Trening_personalny*> _unnamed_Trening_personalny_;
 
 	void wglad_do_karty_zdrowia(Klient*);
+	
+	Trener(string, string, int);
+	
+	int getID();
 };
 
 #endif
