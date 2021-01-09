@@ -24,6 +24,11 @@ public:
 	 void dodaj_informacje();
 	 void zmien_dane();
 	 Karta_zdrowia(int m, int w, string k, Klient* klient, Trener* trener);
+	 Dietetyk* _unnamed_Dietetyk_;
+
+
+	 Karta_zdrowia(int m, int w, string k, Klient* klient, Trener* trener);
+	 Karta_zdrowia(int m, int w, string k, Klient* klient, Dietetyk* dietetyk);
 	 
 };
 
