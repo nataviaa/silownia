@@ -1,0 +1,30 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+#include "../silownia_projekt/Trener.cpp"
+#include "../silownia_projekt/Klient.cpp"
+#include "../silownia_projekt/Karta_zdrowia.cpp"
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace TestTrener
+{
+	TEST_CLASS(TestTrener)
+	{
+	public:
+		
+		TEST_METHOD(TestKonstruktora)
+		{
+			string a = "imie";
+			string b = "nazwisko";
+			int id = 123;
+			Trener t(a, b, id);
+			Assert::AreEqual(id, t.getID());
+		}
+		TEST_METHOD(Test_wglad_do_karty_zdrowia)
+		{
+			Klient klient("Jan", "Chlanda", 2000);
+			Trener trener("Eryk", "Czapla", 1996);
+			Karta_zdrowia k1(80, 180, "0-", &klient, &trener);
+		}
+	};
+}
