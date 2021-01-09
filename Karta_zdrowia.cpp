@@ -6,13 +6,6 @@ using namespace std;
 #include "Klient.h"
 #include "Trener.h"
 
-void Karta_zdrowia::dodaj_informacje() {
-	throw "Not yet implemented";
-}
-
-void Karta_zdrowia::zmien_dane() {
-	throw "Not yet implemented";
-}
 Karta_zdrowia::Karta_zdrowia(int m, int w, string k, Klient* klient, Trener* trener) {
 	_masa = m;
 	_wzrost = w;
@@ -20,4 +13,13 @@ Karta_zdrowia::Karta_zdrowia(int m, int w, string k, Klient* klient, Trener* tre
 	_unnamed_Klient_ = klient;
 	_unnamed_Trener_ = trener;
 }
+
+Karta_zdrowia::Karta_zdrowia(int m, int w, string k, Klient* klient, Dietetyk* dietetyk) {
+	_masa = m;
+	_wzrost = w;
+	_grupa_krwi = k;
+	_unnamed_Klient_ = klient;
+	_unnamed_Dietetyk_ = dietetyk;
+}
+
 
