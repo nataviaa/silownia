@@ -15,16 +15,34 @@ Klient::Klient(string imie , string nazwisko, int rok) {
 	_nazwisko = nazwisko;
 	_rok_urodzenia = rok;
 }
-void Klient::zapisz_do_grupy(Grupa_zajeciowa* grupa) {
-	throw "Not yet implemented";
+void Klient::zapisz_do_grupy(Grupa_zajeciowa* grupa, Klient klient) {
+	_unnamed_Grupa_zajeciowa = grupa;
+	cout << "Klient " << _imie << " jest uczestnikiem zajec w grupie." << endl;
+	grupa->dodaj_uczestnika(klient);
 }
 
-Klient Klient::uaktualnij_dane(string aImie, string aNazwisko, string aImie_rodzica, string aNazwisko_rodzica, char aNumer_telefonu_rodzica) {
-	throw "Not yet implemented";
+void Klient::uaktualnij_dane(string imie, string nazwisko, string imie_rodzica, string nazwisko_rodzica) {
+	_imie = imie;
+	_nazwisko = nazwisko;
+	_imie_rodzica = imie_rodzica;
+	_nazwisko_rodzica = nazwisko_rodzica;
+	
 }
 
 void Klient::wglad_w_karte_zdrowia() {
-	throw "Not yet implemented";
+	if (_unnamed_Karta_zdrowia_ != nullptr)
+	{
+		cout << "Dane w karcie zdrowia: " << endl;
+		cout << "Masa[kg]: " << _unnamed_Karta_zdrowia_->_masa << endl;
+		cout << "Wzrost[cm]: " << _unnamed_Karta_zdrowia_->_wzrost << endl;
+		cout << "Grupa krwi: " << _unnamed_Karta_zdrowia_->_grupa_krwi << endl;
+	}
+	else
+		cout << "Brak podpietej karty zdrowia." << endl;
+}
+void Klient::dodaj_karte_zdrowia(Karta_zdrowia k ) {
+	_unnamed_Karta_zdrowia_ = &k;
+	cout << "Karta zdrowia została dodana." << endl;
 }
 
 void Klient::set_karnet(Karnet* k) {
