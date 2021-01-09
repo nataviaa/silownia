@@ -4,7 +4,11 @@ using namespace std;
 #include "Karnet.h"
 #include "Recepcjonista.h"
 
-void Karnet::kup() {
-	throw "Not yet implemented";
+int Karnet::getCena() {
+	return _cena;
+}
+
+bool Karnet::getZnizka() {
+	return _zniżka_uczniowska;
 }
 
