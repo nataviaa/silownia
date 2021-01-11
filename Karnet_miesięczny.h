@@ -1,20 +1,19 @@
 #include <exception>
 using namespace std;
 
-#ifndef __Karnet_miesiêczny_h__
-#define __Karnet_miesiêczny_h__
+#ifndef __Karnet_miesiÃªczny_h__
+#define __Karnet_miesiÃªczny_h__
 
 #include "Karnet.h"
 
 // class Karnet;
-class Karnet_miesiêczny;
+class Karnet_miesiÃªczny;
 
-class Karnet_miesiêczny: public Karnet
+class Karnet_miesiÃªczny: public Karnet
 {
 
-	public: void przed³u¿();
-
-	public: void zawieœ();
+	public: void przedÂ³uÂ¿();
+	public: void zawieÅ“();
 };
 
 #endif
