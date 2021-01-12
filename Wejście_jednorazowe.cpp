@@ -1,10 +1,10 @@
 #include <exception>
 using namespace std;
 
-#include "Wejúcie_jednorazowe.h"
+#include "Wej≈ìcie_jednorazowe.h"
 #include "Karnet.h"
 
-void Wejúcie_jednorazowe::sprawdz_waznosc() {
-	throw "Not yet implemented";
+void Wejscie_jednorazowe::sprawdz_waznosc() 
+{
+	
 }
-
