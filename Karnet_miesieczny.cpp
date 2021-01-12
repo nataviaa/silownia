@@ -1,7 +1,7 @@
 #include <exception>
 using namespace std;
 
-#include "Karnet_miesieczny.h"
+#include "Karnet_miesięczny.h"
 #include "Karnet.h"
 
 void Karnet_miesięczny::przedluz(Karnet*k) 
