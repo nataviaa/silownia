@@ -14,8 +14,8 @@ class Subskrypcja_: public Karnet
 public: 
 	int _czas_trwania;
 	
-	void przedloz();
-	void zawies();
+	void przedloz(Karnet*);
+	void zawies(Karnet*);
 };
 
 #endif
