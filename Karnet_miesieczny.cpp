@@ -4,7 +4,15 @@ using namespace std;
 #include "Karnet_miesięczny.h"
 #include "Karnet.h"
 
-void Karnet_miesięczny::przedluz(Karnet*k) 
+
+
+Karnet_miesięczny:Karnet_miesięczny(bool znizka, int cena)
+{
+	_znizka_uczniowska=znizka;
+	_cena=cena;
+}
+
+void Karnet_miesięczny::przedluz(Karnet* k) 
 {
 	
 }
