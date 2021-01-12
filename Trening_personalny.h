@@ -17,7 +17,7 @@ class Trening_personalny
 {
 private: 
 	string _intensywnosc;
-	int _dzieñ;
+	int _dzien;
 	int _godzina;
 
 public: 
