@@ -1,14 +1,21 @@
 #include <exception>
 using namespace std;
 
-#include "Karnet_miesiêczny.h"
+#include "Karnet_miesiÃªczny.h"
 #include "Karnet.h"
 
-void Karnet_miesiêczny::przed³u¿() {
-	throw "Not yet implemented";
+Karnet_miesiÄ™czny:Karnet_miesiÄ™czny(bool znizka, int cena)
+{
+	_znizka_uczniowska=znizka;
+	_cena=cena;
 }
 
-void Karnet_miesiêczny::zawieœ() {
-	throw "Not yet implemented";
+void Karnet_miesiÄ™czny::przedluz(Karnet* k) 
+{
+	
 }
 
+void Karnet_miesiÄ™czny::zawies(Karnet* k1) 
+{
+	
+}
