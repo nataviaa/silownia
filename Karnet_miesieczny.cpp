@@ -1,7 +1,7 @@
 #include <exception>
 using namespace std;
 
-#include "Karnet_miesieczny.h"
+#include "Karnet_miesięczny.h"
 #include "Karnet.h"
 
 Karnet_miesięczny:Karnet_miesięczny(bool znizka, int cena)
