@@ -4,11 +4,18 @@ using namespace std;
 #include "Karnet_miesieczny.h"
 #include "Karnet.h"
 
-void Karnet_miesieczny::przedluz() {
-	throw "Not yet implemented";
+Karnet_miesięczny:Karnet_miesięczny(bool znizka, int cena)
+{
+	_znizka_uczniowska=znizka;
+	_cena=cena;
 }
 
-void Karnet_miesiêczny::zawies() {
-	throw "Not yet implemented";
+void Karnet_miesięczny::przedluz(Karnet* k) 
+{
+	
 }
 
+void Karnet_miesięczny::zawies(Karnet* k1) 
+{
+	
+}
