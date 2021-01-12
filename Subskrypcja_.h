@@ -6,17 +6,15 @@ using namespace std;
 
 #include "Karnet.h"
 
-// class Karnet;
+class Karnet;
 class Subskrypcja_;
 
 class Subskrypcja_: public Karnet
 {
-private: 
-	int _czas_trwania;
-
 public: 
-	void przed³oz();
-
+	int _czas_trwania;
+	
+	void przedloz();
 	void zawies();
 };
 
