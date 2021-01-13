@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 #include 
-#include // podpiecie 
+#include "../silownia_projekt/Trening_personalny.cpp"
 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
