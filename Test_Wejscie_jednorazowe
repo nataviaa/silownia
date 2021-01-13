@@ -1,0 +1,28 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+#include //podlaczenie
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace TestWejsciejednorazowe
+{
+	TEST_CLASS(TestWejsciejednorazowe)
+	{
+	public:
+		
+		TEST_METHOD(TestMethod1)
+		{
+			double godzina = 19.43;
+			int cena = 20;
+			int dzien = 7;
+		Klient unnamed_Klient("cc", "dd", 10);
+
+			TestWejsciejednorazowe wj(dzien, godzina, cena, &unnamed_Klient);
+
+			Assert::AreEqual(godzina, wj.get_godzina());
+			Assert::AreEqual(dzien, wj.get_dzien());
+
+			Assert::IsTrue(&unnamed_Klient == wj._unnamed_Klient_);
+		}
+	};
+}
