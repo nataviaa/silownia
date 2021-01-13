@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include //podlaczenie
+#include "../silownia_projekt/Wejscie_jednorazowe.cpp"
+#include "../silownia_projekt/Klient.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
