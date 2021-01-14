@@ -29,6 +29,8 @@ public:
 
 	void dodaj_karnet(Karnet*, Klient*);
 
+	void pokaz_harmonogram(Harmonogram);
+
 };
 
 #endif
