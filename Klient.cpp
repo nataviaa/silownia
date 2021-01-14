@@ -28,13 +28,11 @@ void Klient::zapisz_do_dietetyka(int dzien, double godzina, int cena, Dietetyk* 
 	Wizyta_u_dietetyka wizyta(dzien, godzina, cena, dietetyk, klient);//tworzymy wizyte
 	dietetyk->dodaj_wizyte(&wizyta);//dodajemy wizyte do dietetyka
 	_unnamed_Wizyta_u_dietetyka_.push_back(&wizyta);//dodajemy wizyte do klienta
-	cout << "Klient " << _imie << "zostal zapisany na wizyte do dietetyka." << endl;
 }
 void Klient::zapisz_na_trening(int dzien, double godzina, string rodzaj, Trener* trener, Klient* klient) {
 	Trening_personalny trening(dzien, godzina, rodzaj, trener, klient);
 	trener->dodaj_trening(&trening);
 	_unnamed_Trening_personalny_.push_back(&trening);
-	cout << "Klient " << _imie << "zostal zapisany na trening personalny" << endl;
 
 }
 void Klient::uaktualnij_dane(string imie, string nazwisko, string imie_rodzica, string nazwisko_rodzica) {
@@ -42,8 +40,7 @@ void Klient::uaktualnij_dane(string imie, string nazwisko, string imie_rodzica, 
 	_nazwisko = nazwisko;
 	_imie_rodzica = imie_rodzica;
 	_nazwisko_rodzica = nazwisko_rodzica;
-
-	cout << "Zamiany w danych klienta zostały zapisane pomyslnie." << endl;
+	
 }
 
 void Klient::wglad_w_karte_zdrowia() {
@@ -59,7 +56,7 @@ void Klient::wglad_w_karte_zdrowia() {
 }
 void Klient::dodaj_karte_zdrowia(Karta_zdrowia k ) {
 	_unnamed_Karta_zdrowia_ = &k;
-	cout << "Karta zdrowia została dodana." << endl;
+	cout << "Karta zdrowia zosta�a dodana." << endl;
 }
 void Klient::set_karnet(Karnet* k) {
 	_unnamed_Karnet = k;

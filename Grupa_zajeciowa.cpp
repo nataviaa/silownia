@@ -1,4 +1,5 @@
 #include <exception>
+#include <vector>
 using namespace std;
 
 #include "Grupa_zajeciowa.h"
