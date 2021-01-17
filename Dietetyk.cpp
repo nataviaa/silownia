@@ -28,7 +28,8 @@ Karta_zdrowia* Dietetyk::wglad_do_karty_zdrowia(Klient k) {
 
 	return k._unnamed_Karta_zdrowia_;
 }
-void Dietetyk::dodaj_wizyte(Wizyta_u_dietetyka* wizyta) {
+void Dietetyk::dodaj_wizyte(Wizyta_u_dietetyka* wizyta) 
+{
 	_unnamed_Wizyta_u_dietetyka_.push_back(wizyta);
 }
 

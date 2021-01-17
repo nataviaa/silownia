@@ -19,3 +19,7 @@ void Grupa_zajeciowa::podaj_godziny_zajec() {
 	throw "Not yet implemented";
 }
 
+void Grupa_zajeciowa::wypisz1()
+{ 
+	cout <<"Klient zapisal sie na: "<< _rodzaj_zajec <<"\nGodzina: "<< _godzina <<"\nDzien tygodnia: "<< _dzien_tygodnia <<"\nNumer sali: "<< _sala <<"\nLiczba osob w grupie: "<<_liczba_osob<< endl;
+}
