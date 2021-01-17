@@ -1,5 +1,6 @@
 
 #include "Dieta.h"
+
 int Dieta::get_kalorycznosc() {
 	return _kalorycznosc;
 }
@@ -7,5 +8,4 @@ int Dieta::get_kalorycznosc() {
 Dieta::Dieta(int k) {
 	_kalorycznosc = k;
 }
-
 

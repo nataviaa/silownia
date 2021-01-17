@@ -8,18 +8,26 @@
 
 class Recepcjonista;
 class Karnet;
+class Klient;
 
 class Karnet
 {
 private: 
-	bool _zni¿ka_uczniowska;
+	bool _zni�ka_uczniowska;
 	int _cena;
+	int _dzien;
+	int _miesiac;
+
 public: 
-	
-	Karnet(bool z, int c) :
-		_zni¿ka_uczniowska(z), _cena(c) {}
-	 bool getZnizka();
-	 int getCena();
+	Klient* _unnamed_Klient_;
+	Recepcjonista* _unnamed_Recepcjonista_;
+
+	Karnet(bool, int,int,int,Recepcjonista*, Klient* );
+	bool get_znizka();
+	int get_cena();
+	int get_dzien();
+	int get_miesiac();
+
 };
 
 #endif

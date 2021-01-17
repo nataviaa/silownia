@@ -17,12 +17,18 @@ class Trening_personalny
 {
 private: 
 	string _intensywnosc;
-	int _dzien;
-	int _godzina;
+	int _dzieñ;
+	double _godzina;
 
 public: 
 	Trener* _unnamed_Trener_;
 	Klient* _unnamed_Klient_;
+	Trening_personalny(int, double, string, Trener*, Klient*);
+
+	int get_dzien();
+	double get_godzina();
+	string get_intensywnosc();
+	
 };
 
 #endif

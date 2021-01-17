@@ -1,5 +1,6 @@
 #include <exception>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -16,22 +17,25 @@ class Grupa_zajeciowa;
 class Grupa_zajeciowa
 {
 private: 
-	int _godzina;
+	double _godzina;
 	string _rodzaj_zajec;//np Yoga, k-box
 	int  _liczba_osob;
 	int  _sala;
 	int _dzien_tygodnia;//1-7
 	
 public: 
-	Klient* _unnamed_Klient_;
+	vector <Klient*> _unnamed_Klient_; 
 	Trener* _unnamed_Trener_;
-	Grupa_zajeciowa(int g, int l, int s, int d, string rodzaj) :
+	Grupa_zajeciowa(double g, int l, int s, int d, string rodzaj) :
 		_godzina(g), _liczba_osob(l), _sala(s), _dzien_tygodnia(d), _rodzaj_zajec(rodzaj) {}
-	void dodaj_uczestnika();
+	void dodaj_uczestnika(Klient);
 
-	void usun_uczestnika();
+	void usun_uczestnika(Klient);
 
 	void podaj_godziny_zajec();
+
+	void wypisz1();
+	
 };
 
 #endif

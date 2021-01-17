@@ -9,19 +9,28 @@ using namespace std;
 #include "Wizyta_u_dietetyla.h"
 #include "Pracownik.h"
 
-class Wizyta_u_dietetyla;
-// class Pracownik;
+class Wizyta_u_dietetyka;
 class Dietetyk;
 
 class Dietetyk: public Pracownik
 {
+	string _imie;
+	string _nazwisko;
+	int _id;
 
 public: 
-	
-	Dietetyk();
-	std::vector<Wizyta_u_dietetyla*> _unnamed_Wizyta_u_dietetyla_;
+	std::vector<Wizyta_u_dietetyka*> _unnamed_Wizyta_u_dietetyka_;
+
+	Dietetyk(string, string, int);
 
 	int getID();
+
+	Karta_zdrowia* wglad_do_karty_zdrowia(Klient);
+
+	void dodaj_wizyte(Wizyta_u_dietetyka*);
+
+	
+
 };
 
 #endif

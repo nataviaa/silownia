@@ -3,8 +3,10 @@
 using namespace std;
 
 #include "Wizyta_u_dietetyla.h"
+#include "Trener.h"
 #include "Dietetyk.h"
 #include "Klient.h"
+
 
 Wizyta_u_dietetyka::Wizyta_u_dietetyka(int a, double b, int c, Dietetyk* dietetyk, Klient* klient) {
 	_dzien = a;
@@ -21,5 +23,6 @@ double Wizyta_u_dietetyka::get_godzina() {
 	return _godzina_wizyty;
 }
 
-
-
+int Wizyta_u_dietetyka::get_cena() {
+	return _cena;
+}

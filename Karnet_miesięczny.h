@@ -1,25 +1,34 @@
 #include <exception>
 using namespace std;
 
-#ifndef __Karnet_miesiÄ™czny_h__
-#define __Karnet_miesiÄ™czny_h__
+#ifndef __Karnet_miesiêczny_h__
+#define __Karnet_miesiêczny_h__
 
 #include "Karnet.h"
 
 class Karnet;
-class Karnet_miesiÄ™czny;
+class Klient;
 
-class Karnet_miesiÄ™czny: public Karnet
+class Karnet_miesiêczny // : public Karnet
 {
-   public:
-   
-	bool _znizka_uczniowska;
+
+private:
+
+	int _dzien;
+	int _miesiac;
 	int _cena;
-	
-   Karnet_miesiÄ™czny(bool,int);
-	
-	 void przedluz(Karnet*);
-	 void zawies(Karnet*);
+
+	Karnet* _unnamed_Karnet;
+
+public:
+	Karnet_miesiêczny(int, int, int);
+
+	void przedluz(Karnet*, Klient*kl);
+	void zawies(Karnet*, Karnet_miesiêczny);
 };
 
 #endif
+
+
+
+

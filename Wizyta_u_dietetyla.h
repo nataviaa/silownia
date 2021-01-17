@@ -12,9 +12,9 @@ using namespace std;
 
 class Dietetyk;
 class Klient;
-class Wizyta_u_dietetyla;
+class Wizyta_u_dietetyka;
 
-class Wizyta_u_dietetyla
+class Wizyta_u_dietetyka
 {
 private: 
 	int _dzien;
@@ -26,5 +26,8 @@ public:
 	Wizyta_u_dietetyka(int, double, int, Dietetyk*,Klient*);
 	int get_dzien();
 	double get_godzina();
+	int get_cena();
+
+};
 
 #endif
