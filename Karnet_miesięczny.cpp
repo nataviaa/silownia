@@ -2,29 +2,35 @@
 #include <iostream>
 using namespace std;
 
-#include "Karnet_miesiêczny.h"
+#include "Karnet_miesiÃªczny.h"
 #include "Karnet.h"
 #include"Klient.h"
 
 
-Karnet_miesiêczny::Karnet_miesiêczny(int dzien, int miesiac, int cena)
+
+Karnet_miesiï¿½czny::Karnet_miesiï¿½czny(int dzien, int miesiac, int cena)
 {
 	_dzien = dzien;
 	_miesiac = miesiac;
 	_cena = cena;
 }
 
-void Karnet_miesiêczny::przedluz(Karnet* k, Klient* kl)
+void Karnet_miesiï¿½czny::przedluz(Karnet* k, Klient* kl)
 {
 	//k->_miesiac + 01 = k;
-	cout << "Karnet zosta³ przed³uzony do dnia: " << _dzien << ", miesiaca: " << _miesiac << endl;
+	cout << "Karnet zostal przedluzony do dnia: " << _dzien << ", miesiaca: " << _miesiac << endl;
 	cout << "Koszt: " << _cena << "zl"<<endl;
 }
 
-void Karnet_miesiêczny::zawies(Karnet* k1, Karnet_miesiêczny karnet_miesiêczny)
+void Karnet_miesiï¿½czny::zawies(Karnet* k1, Karnet_miesiï¿½czny karnet_miesiï¿½czny)
 {
 
-	cout << "Karnet zosta³ zawieszony do dnia:" << _dzien << ", miesiaca: " << _miesiac << endl;
+	cout << "Karnet zostaï¿½ zawieszony do dnia:" << _dzien << ", miesiaca: " << _miesiac << endl;
 	cout << "Koszt: " << _cena << "zl"<<endl;
+
 }
 
+void Karnet_miesiÄ™czny::zawies(Karnet* k1) 
+{
+	
+}

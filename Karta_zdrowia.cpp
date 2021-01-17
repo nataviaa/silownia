@@ -7,7 +7,6 @@ using namespace std;
 #include "Trener.h"
 #include "Dietetyk.h"
 
-
 Karta_zdrowia::Karta_zdrowia(int m, int w, string k, Klient* klient, Trener* trener) {
 	_masa = m;
 	_wzrost = w;
@@ -23,4 +22,5 @@ Karta_zdrowia::Karta_zdrowia(int m, int w, string k, Klient* klient, Dietetyk* d
 	_unnamed_Klient_ = klient;
 	_unnamed_Dietetyk_ = dietetyk;
 }
+
 

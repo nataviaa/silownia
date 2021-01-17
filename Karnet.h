@@ -13,7 +13,7 @@ class Klient;
 class Karnet
 {
 private: 
-	bool _zni¿ka_uczniowska;
+	bool _znizka_uczniowska;
 	int _cena;
 	int _dzien;
 	int _miesiac;

@@ -7,12 +7,12 @@ using namespace std;
 #define __Dietetyk_h__
 
 #include "Wizyta_u_dietetyla.h"
-#include "Pracownik.h"
 
 class Wizyta_u_dietetyka;
+
 class Dietetyk;
 
-class Dietetyk: public Pracownik
+class Dietetyk: 
 {
 	string _imie;
 	string _nazwisko;
@@ -30,6 +30,7 @@ public:
 	void dodaj_wizyte(Wizyta_u_dietetyka*);
 
 	
+
 
 };
 

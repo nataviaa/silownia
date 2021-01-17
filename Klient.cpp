@@ -12,7 +12,7 @@ using namespace std;
 #include "Trener.h"
 #include "Dietetyk.h"
 #include "Trening_personalny.h"
-#include "Wejœcie_jednorazowe.h"
+#include "Wejï¿½cie_jednorazowe.h"
 
 Klient::Klient(string imie , string nazwisko, int rok) {
 	_imie = imie;
@@ -77,7 +77,7 @@ void Klient::uaktualnij_dane(string imie, string nazwisko, string imie_rodzica, 
 	_imie_rodzica = imie_rodzica;
 	_nazwisko_rodzica = nazwisko_rodzica;
 
-	cout << "Zamiany w danych klienta zosta³y zapisane pomyslnie." << endl;
+	cout << "Zamiany w danych klienta zostaï¿½y zapisane pomyslnie." << endl;
 }
 
 void Klient::wglad_w_karte_zdrowia() {
@@ -93,7 +93,7 @@ void Klient::wglad_w_karte_zdrowia() {
 }
 void Klient::dodaj_karte_zdrowia(Karta_zdrowia k ) {
 	_unnamed_Karta_zdrowia_ = &k;
-	cout << "Karta zdrowia zosta³a dodana." << endl;
+	cout << "Karta zdrowia zostaï¿½a dodana." << endl;
 }
 void Klient::set_karnet(Karnet* k) {
 	_unnamed_Karnet = k;
@@ -106,6 +106,7 @@ string Klient::get_imie() {
 Grupa_zajeciowa* Klient::get_grupa() {
 	return _unnamed_Grupa_zajeciowa;
 }
+
 
 Karta_zdrowia* Klient::get_karta_zdrowia() {
 	return _unnamed_Karta_zdrowia_;

@@ -30,6 +30,8 @@ public:
 
 	void dodaj_karnet(Karnet*);
 
+	void pokaz_harmonogram(Harmonogram);
+
 };
 
 #endif

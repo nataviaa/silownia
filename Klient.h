@@ -49,12 +49,14 @@ public:
 	void dodaj_karte_zdrowia(Karta_zdrowia);
 	void wglad_w_karte_zdrowia();
 	void set_karnet(Karnet*);
+	
 	Karta_zdrowia* get_karta_zdrowia();
 	string get_imie();
 	Grupa_zajeciowa* get_grupa();
 	std::vector<Wizyta_u_dietetyka*> get_wizyta();
 	std::vector<Trening_personalny*> get_trening();
 	std::vector<Karnet*> get_karnet();
+
 };
 
 #endif
