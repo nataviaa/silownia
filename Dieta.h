@@ -8,8 +8,7 @@ private:
 	int _kalorycznosc;
 
 public:
-	Dieta(int k) :
-		_kalorycznoos(k) {}
+	Dieta(int);
 	
 	int get_kalorycznosc();
 
