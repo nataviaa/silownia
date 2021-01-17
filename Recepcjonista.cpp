@@ -16,9 +16,9 @@ void Recepcjonista::archiwizuj_potwierdzenia_przelewu(Karnet k) {
 	cout<<"Karnet zostal wysłany do ksiegowosci"<<endl;
 }
 
-void Recepcjonista::dodaj_karnet(Karnet* k1, Klient* k2) {
-	k2->set_karnet(k1);
-	cout << "Karnet został dodany." << endl;
+void Recepcjonista::dodaj_karnet(Karnet* karnet) 
+{
+	_unnamed_Karnet_.push_back(karnet);
 }
 
 void Recepcjonista::pokaz_harmonogram(Harmonogram a) {

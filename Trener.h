@@ -19,19 +19,28 @@ class Trening_personalny;
 class Pracownik;
 class Trener;
 
-class Trener: public Pracownik
+class Trener 
 {
 private:
-	//int[70] _dostepnosc_godzinowa;
+
+	int* _dostepnosc_godzinowa;
+	string _imie;
+	string _nazwisko;
+	int _id;
 
 public: 
-	//std::vector<Karta_zdrowia*> _unnamed_Karta_zdrowia_;
 	
 	std::vector<Grupa_zajeciowa*> _unnamed_Grupa_zajeciowa_;
 	
 	std::vector<Trening_personalny*> _unnamed_Trening_personalny_;
 
-	void wglad_do_karty_zdrowia(Klient*);
+	Karta_zdrowia* wglad_do_karty_zdrowia(Klient);
+	
+	Trener(string, string, int);
+
+	int getID();
+
+	void dodaj_trening(Trening_personalny*);
 };
 
 #endif

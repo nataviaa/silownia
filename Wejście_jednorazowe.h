@@ -1,18 +1,31 @@
 #include <exception>
 using namespace std;
 
-#ifndef __Wejœcie_jednorazowe_h__
-#define __Wejœcie_jednorazowe_h__
+#ifndef __Wejscie_jednorazowe_h__
+#define __Wejscie_jednorazowe_h__
 
-#include "Karnet.h"
+//#include "Karnet.h"
+#include "Klient.h"
 
-// class Karnet;
-class Wejœcie_jednorazowe;
+//class Karnet;
+class Wejscie_jednorazowe;
+class Klient;
 
-class Wejœcie_jednorazowe: public Karnet
+class Wejscie_jednorazowe
 {
+private:
 
-	public: void sprawdz_waznosc();
+	int _dzien;
+	int _cena;
+
+public:
+
+	Klient* _unnamed_Klient_;
+	Recepcjonista* _unnamed_Recepcjonista_;
+	Wejscie_jednorazowe(int, int, Recepcjonista*, Klient*);
+	int get_dzien();
+	
+
 };
 
 #endif

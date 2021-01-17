@@ -1,0 +1,22 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+#include "..//Recepcjonista.h"//podpięcie pliku Recepcjonista.h
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace UnitTest1
+{
+    TEST_CLASS(UnitTest1)
+    {
+    public:
+
+        TEST_METHOD(TestMethod1)
+        {
+            int iD = 123;
+            string a = "Anna";
+            string b = "Annasz";
+            Recepcjonista r(a,b,iD);
+            Assert::AreEqual(iD, r._iD());
+        }
+    };
+}

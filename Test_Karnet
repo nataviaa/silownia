@@ -1,0 +1,23 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+#include "../silownia_projekt/Karnet.cpp"
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace TestKarnet
+{
+	TEST_CLASS(TestKarnet)
+	{
+	public:
+		
+		TEST_METHOD(TestKonstruktora)
+		{
+			bool a = true;
+			int b = 123;
+			Karnet k(a, b);
+			Assert::AreEqual(a, k.getZnizka());
+			Assert::AreEqual(b, k.getCena());
+		}
+		
+	};
+}

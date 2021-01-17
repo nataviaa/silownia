@@ -11,11 +11,12 @@ using namespace std;
 class Klient;
 class Trener;
 class Karta_zdrowia;
+class Dietetyk;
 
 class Karta_zdrowia
 {
 public: 
-	int _masa;;
+	int _masa;
 	int _wzrost;
 	string _grupa_krwi;
 	Klient* _unnamed_Klient_;
@@ -24,7 +25,7 @@ public:
 
 	 Karta_zdrowia(int m, int w, string k, Klient* klient, Trener* trener);
 	 Karta_zdrowia(int m, int w, string k, Klient* klient, Dietetyk* dietetyk);
-	 
+
 };
 
 #endif

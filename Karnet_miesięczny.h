@@ -6,15 +6,29 @@ using namespace std;
 
 #include "Karnet.h"
 
-// class Karnet;
-class Karnet_miesiêczny;
+class Karnet;
+class Klient;
 
-class Karnet_miesiêczny: public Karnet
+class Karnet_miesiêczny // : public Karnet
 {
 
-	public: void przed³u¿();
+private:
 
-	public: void zawieœ();
+	int _dzien;
+	int _miesiac;
+	int _cena;
+
+	Karnet* _unnamed_Karnet;
+
+public:
+	Karnet_miesiêczny(int, int, int);
+
+	void przedluz(Karnet*, Klient*kl);
+	void zawies(Karnet*, Karnet_miesiêczny);
 };
 
 #endif
+
+
+
+
