@@ -38,7 +38,12 @@ public:
 	
 	Trener(string, string, int);
 
+	string get_imie();
+	string get_nazwisko();
 	int getID();
+	std::vector<Grupa_zajeciowa*> get_grupa();
+	std::vector<Trening_personalny*> get_trening_personalny();
+
 
 	void dodaj_trening(Trening_personalny*);
 };

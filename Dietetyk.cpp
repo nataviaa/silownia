@@ -12,9 +12,17 @@ Dietetyk::Dietetyk(string a, string b, int id) {
 	_nazwisko = b;
 	_id = id;
 }
-int Dietetyk::getID(){
+string Dietetyk::get_imie() {
+	return _imie;
+}
+string Dietetyk::get_nazwisko() {
+	return _nazwisko;
+}
+
+int Dietetyk::getID() {
 	return _id;
 }
+
 Karta_zdrowia* Dietetyk::wglad_do_karty_zdrowia(Klient k) {
 	if (k._unnamed_Karta_zdrowia_ != nullptr)
 	{

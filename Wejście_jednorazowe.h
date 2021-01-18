@@ -23,6 +23,8 @@ public:
 	Klient* _unnamed_Klient_;
 	Wejscie_jednorazowe(int, int, Klient*);
 	int get_dzien();
+	int get_cena();
+	Klient* get_klient();
 	
 
 };

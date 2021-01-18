@@ -26,3 +26,9 @@ double Wizyta_u_dietetyka::get_godzina() {
 int Wizyta_u_dietetyka::get_cena() {
 	return _cena;
 }
+Dietetyk* Wizyta_u_dietetyka::get_dietetyk() {
+	return _unnamed_Dietetyk_;
+}
+Klient* Wizyta_u_dietetyka::get_klient() {
+	return _unnamed_Klient_;
+}

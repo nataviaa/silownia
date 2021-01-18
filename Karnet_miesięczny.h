@@ -28,6 +28,8 @@ public:
 	void wypisz2();
 	int get_miesiac();
 	int get_dzien();
+	int get_cena();
+	Karnet* get_karnet();
 };
 
 #endif

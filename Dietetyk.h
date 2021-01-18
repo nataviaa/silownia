@@ -22,14 +22,13 @@ public:
 	std::vector<Wizyta_u_dietetyka*> _unnamed_Wizyta_u_dietetyka_;
 
 	Dietetyk(string, string, int);
-
+	string get_imie();
+	string get_nazwisko();
 	int getID();
 
 	Karta_zdrowia* wglad_do_karty_zdrowia(Klient);
 
 	void dodaj_wizyte(Wizyta_u_dietetyka*);
-
-	
 
 };
 

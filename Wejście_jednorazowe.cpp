@@ -17,5 +17,12 @@ int Wejscie_jednorazowe::get_dzien()
 {
 	return _dzien;
 }
+int Wejscie_jednorazowe::get_cena() {
+	return _cena;
+}
+Klient* Wejscie_jednorazowe::get_klient() {
+	return _unnamed_Klient_;
+}
+
 
 

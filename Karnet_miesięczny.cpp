@@ -66,9 +66,12 @@ void Karnet_miesiêczny::przedluz( Karnet_miesiêczny* k, Klient* k1)
 
 void Karnet_miesiêczny::zawies(Karnet_miesiêczny* karnet, Klient* k2)
 {
-	if (karnet->get_dzien()!=NULL && karnet->get_miesiac()!=NULL)
+	if (karnet->_dzien!=NULL && karnet->_miesiac!=NULL)
 	{
 		cout << "Karnet zostal zawieszony." << endl;
+		//cout << "Karnet zostal zawieszony do dnia: " << _dzien << ", miesiaca: " << _miesiac << endl;
+		//cout << "Koszt: " << _cena << "zl" << endl;
+
 	}
 }
 
@@ -84,4 +87,11 @@ int Karnet_miesiêczny::get_miesiac()
 int Karnet_miesiêczny::get_dzien()
 {
 	return _dzien;
+}
+int Karnet_miesiêczny::get_cena()
+{
+	return _cena;
+}
+Karnet* Karnet_miesiêczny::get_karnet() {
+	return _unnamed_Karnet;
 }

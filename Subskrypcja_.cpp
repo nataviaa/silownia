@@ -11,4 +11,8 @@ void Subskrypcja_::przed³oz() {
 void Subskrypcja_::zawies() {
 	throw "Not yet implemented";
 }
+int Subskrypcja_::get_czas_trwania() {
+	return _czas_trwania;
+}
+
 

@@ -106,6 +106,10 @@ string Klient::get_imie() {
 Grupa_zajeciowa* Klient::get_grupa() {
 	return _unnamed_Grupa_zajeciowa;
 }
+Karnet* Klient::get_karnet1() {
+	return _unnamed_Karnet;
+}
+
 
 Karta_zdrowia* Klient::get_karta_zdrowia() {
 	return _unnamed_Karta_zdrowia_;
@@ -122,6 +126,10 @@ std::vector<Trening_personalny*> Klient::get_trening() {
 std::vector<Karnet*> Klient::get_karnet() {
 	return _unnamed_Karnet_;
 }
+std::vector < Wejscie_jednorazowe*>  Klient::get_wejscie_jednorazowe() {
+	return _unnamed_Wejscie_jednorazowe_;
+}
+
 
 void  Klient:: wypisz3()
 {
@@ -130,5 +138,18 @@ void  Klient:: wypisz3()
 void  Klient:: wypisz4()
 {
 	cout << "\nKlient:" << _imie << _nazwisko << " chce zawiesic swoj karnet" << endl;
+}
+
+string  Klient::get_nazwisko() {
+	return _nazwisko;
+}
+int  Klient::get_rok_urodzenia() {
+	return _rok_urodzenia;
+}
+string  Klient::get_imie_rodzica() {
+	return _imie_rodzica;
+}
+string  Klient::get_nazwisko_rodzica() {
+	return _nazwisko_rodzica;
 }
 

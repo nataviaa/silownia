@@ -16,8 +16,8 @@ private:
 
 public: 
 	void przed³oz();
-
 	void zawies();
+	int get_czas_trwania();
 };
 
 #endif

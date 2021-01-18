@@ -35,6 +35,14 @@ public:
 	void podaj_godziny_zajec();
 
 	void wypisz1();
+
+	double get_godzina();
+	string get_rodzaj_zajec();
+	int get_liczba_osob();
+	int get_sala();
+	int get_dzien_tygodnia();
+	std::vector<Klient*> get_klient();
+	Trener* get_trener();
 	
 };
 

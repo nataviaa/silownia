@@ -24,6 +24,7 @@ public:
 	int get_cena();
 	int get_dzien();
 	int get_miesiac();
+	Klient* get_klient();
 
 };
 

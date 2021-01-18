@@ -21,3 +21,12 @@ void Recepcjonista::dodaj_karnet(Karnet* karnet)
 	_unnamed_Karnet_.push_back(karnet);
 }
 
+string Recepcjonista::get_imie() {
+	return _imie;
+}
+string Recepcjonista::get_nazwisko() {
+	return _nazwisko;
+}
+int Recepcjonista::get_iD() {
+	return _iD;
+}

@@ -27,3 +27,9 @@ string Trening_personalny::get_intensywnosc()
 {
 	return _intensywnosc;
 }
+Trener* Trening_personalny::get_trener() {
+	return _unnamed_Trener_;
+}
+Klient* Trening_personalny::get_klient() {
+	return _unnamed_Klient_;
+}

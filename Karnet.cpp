@@ -33,3 +33,6 @@ int Karnet::get_miesiac()
 {
 	return _miesiac;
 }
+Klient* Karnet::get_klient() {
+	return _unnamed_Klient_;
+}

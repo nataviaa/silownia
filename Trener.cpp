@@ -34,9 +34,20 @@ Trener::Trener(string a, string b, int c) {
 	_nazwisko = b;
 	_id = c;
 }
+string Trener::get_imie() {
+	return _imie;
+}
+string Trener::get_nazwisko() {
+	return _nazwisko;
+}
 
 int Trener::getID() {
 	return _id;
 }
-
+std::vector<Grupa_zajeciowa*>  Trener::get_grupa() {
+	return _unnamed_Grupa_zajeciowa_;
+}
+std::vector<Trening_personalny*>  Trener::get_trening_personalny() {
+	return _unnamed_Trening_personalny_;
+}
 

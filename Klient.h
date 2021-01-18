@@ -52,11 +52,18 @@ public:
 	void wypisz3();
 	void wypisz4();
 	Karta_zdrowia* get_karta_zdrowia();
-	string get_imie();
 	Grupa_zajeciowa* get_grupa();
+	Karnet* get_karnet1();
 	std::vector<Wizyta_u_dietetyka*> get_wizyta();
 	std::vector<Trening_personalny*> get_trening();
 	std::vector<Karnet*> get_karnet();
+	std::vector < Wejscie_jednorazowe*> get_wejscie_jednorazowe();
+
+	string get_imie();
+	string get_nazwisko();
+	int get_rok_urodzenia();
+	string get_imie_rodzica();
+	string get_nazwisko_rodzica();
 };
 
 #endif

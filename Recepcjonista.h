@@ -30,6 +30,9 @@ public:
 
 	void dodaj_karnet(Karnet*);
 
+	string get_imie();
+	string get_nazwisko();
+	int get_iD();
 };
 
 #endif

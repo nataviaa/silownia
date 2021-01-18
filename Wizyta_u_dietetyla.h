@@ -27,6 +27,8 @@ public:
 	int get_dzien();
 	double get_godzina();
 	int get_cena();
+	Dietetyk* get_dietetyk();
+	Klient* get_klient();
 
 };
 

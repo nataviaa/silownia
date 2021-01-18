@@ -28,6 +28,8 @@ public:
 	int get_dzien();
 	double get_godzina();
 	string get_intensywnosc();
+	Trener* get_trener();
+	Klient* get_klient();
 	
 };
 

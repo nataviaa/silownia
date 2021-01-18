@@ -28,6 +28,8 @@ namespace TestKarnet
 			Karnet k(a, b, c, d, &f);
 			Assert::AreEqual(a, k.get_znizka());
 			Assert::AreEqual(b, k.get_cena());
+			Assert::AreEqual(c, k.get_dzien());
+			Assert::AreEqual(d, k.get_miesiac());
 		}
 		
 	};
