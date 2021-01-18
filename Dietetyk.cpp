@@ -11,18 +11,19 @@ Dietetyk::Dietetyk(string a, string b, int id) {
 	_imie = a;
 	_nazwisko = b;
 	_id = id;
+	char chars[] = "qwertyuiopasdfghjklzxcvbnm1234567890";
+	for (int i = 0; i < 6; i++)
+	{
+		_haslo += chars[rand() % 37];
+	}
+	cout << "Haslo zostalo automatycznie wygenerowane: " << _haslo << endl;
 }
-string Dietetyk::get_imie() {
-	return _imie;
-}
-string Dietetyk::get_nazwisko() {
-	return _nazwisko;
-}
-
-int Dietetyk::getID() {
+int Dietetyk::get_id(){
 	return _id;
 }
-
+string Dietetyk::get_haslo() {
+	return _haslo;
+}
 Karta_zdrowia* Dietetyk::wglad_do_karty_zdrowia(Klient k) {
 	if (k._unnamed_Karta_zdrowia_ != nullptr)
 	{
@@ -36,8 +37,7 @@ Karta_zdrowia* Dietetyk::wglad_do_karty_zdrowia(Klient k) {
 
 	return k._unnamed_Karta_zdrowia_;
 }
-void Dietetyk::dodaj_wizyte(Wizyta_u_dietetyka* wizyta) 
-{
+void Dietetyk::dodaj_wizyte(Wizyta_u_dietetyka* wizyta) {
 	_unnamed_Wizyta_u_dietetyka_.push_back(wizyta);
 }
 

@@ -23,22 +23,11 @@ Karta_zdrowia::Karta_zdrowia(int m, int w, string k, Klient* klient, Dietetyk* d
 	_unnamed_Klient_ = klient;
 	_unnamed_Dietetyk_ = dietetyk;
 }
+Karta_zdrowia::Karta_zdrowia(int m, int w, string k, Klient* klient) {
+	_masa = m;
+	_wzrost = w;
+	_grupa_krwi = k;
+	_unnamed_Klient_ = klient;
+	
+}
 
-int Karta_zdrowia::get_masa() {
-	return _masa;
-}
-int Karta_zdrowia::get_wzrost() {
-	return _wzrost;
-}
-string Karta_zdrowia::get_grupa_krwi() {
-	return _grupa_krwi;
-}
-Klient* Karta_zdrowia::get_klient() {
-	return _unnamed_Klient_;
-}
-Trener* Karta_zdrowia::get_trener() {
-	return _unnamed_Trener_;
-}
-Dietetyk* Karta_zdrowia::get_dietetyk() {
-	return _unnamed_Dietetyk_;
-}

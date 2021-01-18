@@ -24,7 +24,7 @@ private:
 	int _dzien_tygodnia;//1-7
 	
 public: 
-	vector <Klient*> _unnamed_Klient_; 
+	vector <Klient*> _unnamed_Klient_;
 	Trener* _unnamed_Trener_;
 	Grupa_zajeciowa(double g, int l, int s, int d, string rodzaj) :
 		_godzina(g), _liczba_osob(l), _sala(s), _dzien_tygodnia(d), _rodzaj_zajec(rodzaj) {}
@@ -33,16 +33,8 @@ public:
 	void usun_uczestnika(Klient);
 
 	void podaj_godziny_zajec();
-
-	void wypisz1();
-
-	double get_godzina();
-	string get_rodzaj_zajec();
-	int get_liczba_osob();
-	int get_sala();
-	int get_dzien_tygodnia();
-	std::vector<Klient*> get_klient();
-	Trener* get_trener();
+	
+	string get_rodzaj();
 	
 };
 

@@ -26,14 +26,7 @@ public:
 
 	 Karta_zdrowia(int m, int w, string k, Klient* klient, Trener* trener);
 	 Karta_zdrowia(int m, int w, string k, Klient* klient, Dietetyk* dietetyk);
-
-	 int get_masa();
-	 int get_wzrost();
-	 string get_grupa_krwi();
-	 Klient* get_klient();
-	 Trener* get_trener();
-	 Dietetyk* get_dietetyk();
-
+	 Karta_zdrowia(int m, int w, string k, Klient* klient);
 };
 
 #endif
