@@ -2,19 +2,19 @@
 #include <iostream>
 using namespace std;
 
-#include "Karnet_miesiêczny.h"
+#include "Karnet_miesiÄ™czny.h"
 #include "Karnet.h"
 #include"Klient.h"
 
 
-Karnet_miesiêczny::Karnet_miesiêczny(int dzien, int miesiac, int cena)
+Karnet_miesiÄ™czny::Karnet_miesiÄ™czny(int dzien, int miesiac, int cena)
 {
 	_dzien = dzien;
 	_miesiac = miesiac;
 	_cena = cena;
 }
 
-void Karnet_miesiêczny::przedluz( Karnet_miesiêczny* k, Klient* k1)
+void Karnet_miesiÄ™czny::przedluz( Karnet_miesiÄ™czny* k, Klient* k1)
 {
 	if ( k->get_miesiac()==2 || k->get_miesiac() ==4 || k->get_miesiac() ==6 || k->get_miesiac() ==7 || k->get_miesiac() ==9 || k->get_miesiac() ==11 || k->get_miesiac() == 12)
 	{
@@ -64,34 +64,38 @@ void Karnet_miesiêczny::przedluz( Karnet_miesiêczny* k, Klient* k1)
 	cout << "Koszt: " << _cena << "zl"<<endl;
 }
 
-void Karnet_miesiêczny::zawies(Karnet_miesiêczny* karnet, Klient* k2)
+void Karnet_miesiÄ™czny::zawies(Karnet_miesiÄ™czny* karnet, Klient* k2)
 {
-	if (karnet->_dzien!=NULL && karnet->_miesiac!=NULL)
+	if (karnet->_dzien ==NULL && karnet->_miesiac==NULL)
 	{
 		cout << "Karnet zostal zawieszony." << endl;
 		//cout << "Karnet zostal zawieszony do dnia: " << _dzien << ", miesiaca: " << _miesiac << endl;
 		//cout << "Koszt: " << _cena << "zl" << endl;
 
 	}
+	
+	else{
+		cout << "Karnet nie zostal zawieszony." << endl;
+		
 }
 
-void Karnet_miesiêczny::wypisz2()
+void Karnet_miesiÄ™czny::wypisz2()
 {
 	cout << "Karnet byl wazny do dnia: " << _dzien << ", miesiaca: " << _miesiac << endl;
 }
 
-int Karnet_miesiêczny::get_miesiac()
+int Karnet_miesiÄ™czny::get_miesiac()
 {
 	return _miesiac;
 }
-int Karnet_miesiêczny::get_dzien()
+int Karnet_miesiÄ™czny::get_dzien()
 {
 	return _dzien;
 }
-int Karnet_miesiêczny::get_cena()
+int Karnet_miesiÄ™czny::get_cena()
 {
 	return _cena;
 }
-Karnet* Karnet_miesiêczny::get_karnet() {
+Karnet* Karnet_miesiÄ™czny::get_karnet() {
 	return _unnamed_Karnet;
 }
