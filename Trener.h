@@ -11,6 +11,7 @@ using namespace std;
 #include "Grupa_zajeciowa.h"
 #include "Trening_personalny.h"
 #include "Pracownik.h"
+#include "Harmonogram.h"
 
 class Karta_zdrowia;
 class Grupa_zajeciowa;
@@ -34,7 +35,19 @@ public:
 	
 	std::vector<Trening_personalny*> _unnamed_Trening_personalny_;
 
+	std::vector <Trening_personalny*> _plan_wizyt_pon;
+	
+	std::vector <Trening_personalny*> _plan_wizyt_wt;
+	
+	std::vector <Trening_personalny*> _plan_wizyt_sr;
+	
+	std::vector <Trening_personalny*> _plan_wizyt_czw;
+	
+	std::vector <Trening_personalny*> _plan_wizyt_pt;
+
 	Karta_zdrowia* wglad_do_karty_zdrowia(Klient);
+
+	Trener();
 	
 	Trener(string, string, int);
 
@@ -45,7 +58,11 @@ public:
 	std::vector<Trening_personalny*> get_trening_personalny();
 
 
-	void dodaj_trening(Trening_personalny*);
+	Trener dodaj_trening(Trening_personalny*);
+
+	Trener dodaj_do_planu_trenera(Trening_personalny*, Trener, Harmonogram);
+
+	Trener wyswietl_plan_tygodnia_trenera(Trener);
 };
 
 #endif
