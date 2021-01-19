@@ -9,15 +9,16 @@ using namespace std;
 // class Karnet;
 class Subskrypcja_;
 
-class Subskrypcja_: public Karnet
+class Subskrypcja
 {
 private: 
-	int _czas_trwania;
+	int _miesiac;
+	int _dzien;
 
 public: 
-	void przed³oz();
+	Subskrypcja(int, int);
+
 	void zawies();
-	int get_czas_trwania();
 };
 
 #endif
