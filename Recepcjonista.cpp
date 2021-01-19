@@ -11,6 +11,12 @@ Recepcjonista::Recepcjonista(string imie, string nazwisko, int i) {
 	_imie = imie;
 	_nazwisko = nazwisko;
 	_iD = i;
+	char chars[] = "qwertyuiopasdfghjklzxcvbnm1234567890";
+	for (int i = 0; i < 6; i++)
+	{
+		_haslo += chars[rand() % 37];
+	}
+	cout << "Haslo zostalo automatycznie wygenerowane: " << _haslo << endl;
 }
 void Recepcjonista::archiwizuj_potwierdzenia_przelewu(Karnet k) {
 	cout<<"Karnet zostal wysłany do ksiegowosci"<<endl;
@@ -29,4 +35,7 @@ string Recepcjonista::get_nazwisko() {
 }
 int Recepcjonista::get_iD() {
 	return _iD;
+}
+string Recepcjonista::get_haslo() {
+	return _haslo;
 }
