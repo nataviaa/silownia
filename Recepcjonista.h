@@ -22,7 +22,7 @@ public:
 	string _imie;
 	string _nazwisko;
 	int _iD;
-	std::vector<Karnet*> _unnamed_Karnet_;
+	string _haslo;
 
 	Recepcjonista(string, string, int);
 		
@@ -33,6 +33,7 @@ public:
 	string get_imie();
 	string get_nazwisko();
 	int get_iD();
+	string get_haslo();
 };
 
 #endif
