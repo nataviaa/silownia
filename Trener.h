@@ -58,7 +58,7 @@ public:
 	std::vector<Trening_personalny*> get_trening_personalny();
 
 
-	Trener dodaj_trening(Trening_personalny*);
+	void dodaj_trening(Trening_personalny*);
 
 	Trener dodaj_do_planu_trenera(Trening_personalny*, Trener, Harmonogram);
 
