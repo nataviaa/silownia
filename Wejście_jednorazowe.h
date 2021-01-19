@@ -11,20 +11,17 @@ using namespace std;
 class Wejscie_jednorazowe;
 class Klient;
 
+
 class Wejscie_jednorazowe
 {
 private:
-
 	int _dzien;
+	int _miesiac;
 	int _cena;
-
 public:
-
-	Klient* _unnamed_Klient_;
-	Wejscie_jednorazowe(int, int, Klient*);
+	Wejscie_jednorazowe(int, int,int);
 	int get_dzien();
 	int get_cena();
-	Klient* get_klient();
 	
 
 };
