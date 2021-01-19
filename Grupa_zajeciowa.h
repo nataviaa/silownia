@@ -16,7 +16,7 @@ class Grupa_zajeciowa;
 
 class Grupa_zajeciowa
 {
-private: 
+public: 
 	double _godzina;
 	string _rodzaj_zajec;//np Yoga, k-box
 	int  _liczba_osob;
