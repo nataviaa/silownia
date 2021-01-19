@@ -40,7 +40,7 @@ public:
 
 	Karta_zdrowia* wglad_do_karty_zdrowia(Klient);
 
-	Dietetyk dodaj_wizyte(Wizyta_u_dietetyka*);
+	void dodaj_wizyte(Wizyta_u_dietetyka*);
 
 	Dietetyk dodaj_do_planu_wizyt_dietetyka(Wizyta_u_dietetyka*, Dietetyk);
 
