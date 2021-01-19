@@ -36,7 +36,7 @@ public:
 
 	Harmonogram usun_zajecia(Grupa_zajeciowa, Harmonogram);
 
-	void pokaz_harmonogram(Harmonogram);
+	
 
 };
 #endif
