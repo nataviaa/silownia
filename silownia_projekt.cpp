@@ -3,20 +3,22 @@
 #include <string>
 #include <time.h>
 #include <ctime>
+#include <algorithm>
 
 #include "Dieta.h"
 #include "Dietetyk.h"
 #include "Grupa_zajeciowa.h"
 #include "Karnet.h"
-#include "Karnet_miesiêczny.h"
+#include "Karnet_miesiÄ™czny.h"
 #include "Karta_zdrowia.h"
 #include "Klient.h"
 #include "Recepcjonista.h"
 #include "Subskrypcja_.h"
 #include "Trener.h"
 #include "Trening_personalny.h"
-#include "Wejœcie_jednorazowe.h"
+#include "WejÅ›cie_jednorazowe.h"
 #include "Wizyta_u_dietetyla.h"
+#include "Harmonogram.h"
 
 using namespace std;
 
@@ -82,7 +84,10 @@ void trener(Trener*zalogowany)
         cout << endl;
         break;
     case 4:break;
-    case 5: break;
+    case 5: 
+        cout<<"Twoj grafik na ten tydzien: "<<endl;
+        wyswietl_plan_tygodnia_trenera(zalogowany);
+    break;
     default:
         break;
     }
@@ -121,7 +126,9 @@ void dietetyk(Dietetyk*zalogowany)
         cout << endl;
         break;
     case 3:break;
-    case 4: break;
+    case 4: 
+        wyswietl_plan_tygodnia_dietetyka(zalogowany);
+    break;
     default:
         break;
     }
@@ -190,7 +197,7 @@ void klient(Klient*zalogowany)
         cout << "2. Zapisz sie na zajecia grupowe." << endl;
         cout << "3. Zapisz sie na trening personalny." << endl;
         cout << "4. Zapisz sie do dietetyka." << endl;
-        cout << "5. Dodaj kartê zdrowia." << endl;
+        cout << "5. Dodaj kartÄ™ zdrowia." << endl;
         cout << "6. Przedluz waznosc swojego karnetu." << endl;
         cout << "7. Wyswietl cennik." << endl;
         cout << "8. Wyswietl harmonogram prowadzaonych zajec grupowych." << endl;
@@ -246,7 +253,9 @@ void klient(Klient*zalogowany)
             cout << "Koszt wizyty u dietetyka: 50" << endl;
             cout << "Koszt treningu personalnego: 60" << endl;
                 break;
-        case 8: break;
+        case 8: 
+            
+                break;
         default:
             break;
         }
