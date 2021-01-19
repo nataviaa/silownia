@@ -254,7 +254,8 @@ void klient(Klient*zalogowany)
             cout << "Koszt treningu personalnego: 60" << endl;
                 break;
         case 8: 
-            
+            cout<<"Aktualny harmonogram zajec: "<<endl;
+            //pokaz_harmonogram(Harmonogram);
                 break;
         default:
             break;
