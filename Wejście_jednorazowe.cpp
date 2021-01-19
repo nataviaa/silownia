@@ -2,15 +2,15 @@
 #include <vector>
 using namespace std;
 
-#include "Wejúcie_jednorazowe.h"
+#include "Wej≈ìcie_jednorazowe.h"
 //#include "Karnet.h"
 #include "Klient.h"
 
-Wejscie_jednorazowe :: Wejscie_jednorazowe(int a, int c, Klient* klient)
+Wejscie_jednorazowe::Wejscie_jednorazowe(int a,int b, int c)
 {
 	_dzien = a;
 	_cena = c;
-	_unnamed_Klient_ = klient;
+	_miesiac = b;
 }
 
 int Wejscie_jednorazowe::get_dzien()
@@ -19,9 +19,6 @@ int Wejscie_jednorazowe::get_dzien()
 }
 int Wejscie_jednorazowe::get_cena() {
 	return _cena;
-}
-Klient* Wejscie_jednorazowe::get_klient() {
-	return _unnamed_Klient_;
 }
 
 
