@@ -12,6 +12,7 @@ using namespace std;
 #include "Trener.h"
 #include "Dietetyk.h"
 #include "Trening_personalny.h"
+#include "Harmonogram.h"
 
 Klient::Klient(string imie , string nazwisko, int rok) {
 	_imie = imie;
@@ -34,12 +35,14 @@ void Klient::zapisz_do_dietetyka(int dzien, double godzina, int cena, Dietetyk* 
 	Wizyta_u_dietetyka wizyta(dzien, godzina, cena, dietetyk, klient);//tworzymy wizyte
 	dietetyk->dodaj_wizyte(&wizyta);//dodajemy wizyte do dietetyka
 	_unnamed_Wizyta_u_dietetyka_.push_back(&wizyta);//dodajemy wizyte do klienta
+	dietetyk->dodaj_do_planu_wizyt_dietetyka(&wizyta, *dietetyk);//dodajemy wizyte do grafiku dietetyka
 	cout << "Klient " << _imie << "zostal zapisany na wizyte do dietetyka." << endl;
 }
 void Klient::zapisz_na_trening(int dzien, double godzina, string rodzaj, Trener* trener, Klient* klient) {
 	Trening_personalny trening(dzien, godzina, rodzaj, trener, klient);
 	trener->dodaj_trening(&trening);
 	_unnamed_Trening_personalny_.push_back(&trening);
+	trener->dodaj_do_planu_trenera(&trening, *trener,harmonogram);//dodajemy trening do grafiku trenera
 	cout << "Klient " << _imie << "zostal zapisany na trening personalny" << endl;
 
 }
@@ -49,7 +52,7 @@ void Klient::uaktualnij_dane(string imie, string nazwisko, string imie_rodzica, 
 	_imie_rodzica = imie_rodzica;
 	_nazwisko_rodzica = nazwisko_rodzica;
 
-	cout << "Zamiany w danych klienta zosta³y zapisane pomyslnie." << endl;
+	cout << "Zamiany w danych klienta zostaÅ‚y zapisane pomyslnie." << endl;
 }
 void Klient::wglad_w_karte_zdrowia() {
 	if (_unnamed_Karta_zdrowia_ != nullptr)
