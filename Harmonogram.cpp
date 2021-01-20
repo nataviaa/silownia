@@ -9,13 +9,14 @@ using namespace std;
 #include "Grupa_zajeciowa.h"
 #include "Harmonogram.h"
 
-Harmonogram::Harmonogram(string miesiac, Trener trener)
+Harmonogram::Harmonogram(string miesiac, Trener trener) 
 {
 	_miesiac = miesiac;
 	_trener = trener;
 };
 
-Harmonogram Harmonogram::stworz_harmonogram(Grupa_zajeciowa gr1,Harmonogram a) {
+Harmonogram Harmonogram::stworz_harmonogram(Grupa_zajeciowa gr1,Harmonogram a) //metoda tworzaca harmonogram dla grupy zajeciowej od poniedzialku di piatku 
+{
 	if (gr1._dzien_tygodnia == 1) {
 		for (int i = 0; i < 5; i++)
 		{
@@ -64,7 +65,8 @@ Harmonogram Harmonogram::stworz_harmonogram(Grupa_zajeciowa gr1,Harmonogram a) {
 	return a;
 }
 
-Harmonogram Harmonogram::modyfikuj_harmonogram(Grupa_zajeciowa gr1, Grupa_zajeciowa gr2, Harmonogram a) {	   //gr1 grupa modyfikowana, gr2 grupa modyfikujaca
+Harmonogram Harmonogram::modyfikuj_harmonogram(Grupa_zajeciowa gr1, Grupa_zajeciowa gr2, Harmonogram a) //metoda modyfikujaca harmonogram miedzy grupami 
+{	   //gr1 grupa modyfikowana, gr2 grupa modyfikujaca
 	if (gr1._dzien_tygodnia == 1) {
 		for (int i = 0; i < 5; i++)
 		{
@@ -115,7 +117,8 @@ Harmonogram Harmonogram::modyfikuj_harmonogram(Grupa_zajeciowa gr1, Grupa_zajeci
 
 };
 
-Harmonogram Harmonogram::usun_zajecia(Grupa_zajeciowa gr1, Harmonogram a) {
+Harmonogram Harmonogram::usun_zajecia(Grupa_zajeciowa gr1, Harmonogram a) //metoda usuwajaca zajecia z Harmonogramu
+{
 	
 	Grupa_zajeciowa gr2(0, 0, 0, 0, NULL);
 	
