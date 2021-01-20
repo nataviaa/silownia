@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-#include "Karnet_miesi�czny.h"
+#include "Karnet_miesięczny.h"
 #include "Karnet.h"
 #include"Klient.h"
 
@@ -14,7 +14,7 @@ Karnet_miesieczny::Karnet_miesieczny(int dzien, int miesiac, int cena)
 	_cena = cena;
 }
 
-void Karnet_miesieczny::przedluz()
+void Karnet_miesieczny::przedluz() //metoda przedluzajaca Karnet miesieczny o miesiac, uwzgledniona została tutaj liczba dni kazdego z poszczegolnych miesiecy
 {
 	if (_miesiac == 2 || _miesiac == 4 || _miesiac == 6 || _miesiac == 9 || _miesiac == 11 )
 	{
@@ -37,15 +37,12 @@ void Karnet_miesieczny::przedluz()
 		}
 		
 	}
-
 	
-
-
 	cout << "Karnet zostal przedluzony do dnia: " << _dzien << ". " << _miesiac << endl;
 	cout << "Koszt: " << _cena << "zl" << endl;
 }
 
-void Karnet_miesieczny::zawies(Karnet_miesieczny* karnet, Klient* k2)
+void Karnet_miesieczny::zawies(Karnet_miesieczny* karnet, Klient* k2) //metoda zawieszajaca Karnet miesieczny 
 {
 	if (karnet->_dzien == NULL && karnet->_miesiac == NULL)
 	{
