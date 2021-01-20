@@ -7,7 +7,8 @@ using namespace std;
 #include "Pracownik.h"
 #include "Klient.h"
 
-Recepcjonista::Recepcjonista(string imie, string nazwisko, int i) {
+Recepcjonista::Recepcjonista(string imie, string nazwisko, int i) //konstruktor w ktorym automatycznie generowane jest haslo Recepcjoniscie
+{
 	_imie = imie;
 	_nazwisko = nazwisko;
 	_iD = i;
@@ -18,11 +19,12 @@ Recepcjonista::Recepcjonista(string imie, string nazwisko, int i) {
 	}
 	cout << "Haslo zostalo automatycznie wygenerowane: " << _haslo << endl;
 }
-void Recepcjonista::archiwizuj_potwierdzenia_przelewu(Karnet k) {
+void Recepcjonista::archiwizuj_potwierdzenia_przelewu(Karnet k) //metoda archiwizujaca potwierdzenie przelewu za Karnet 
+{
 	cout<<"Karnet zostal wysłany do ksiegowosci"<<endl;
 }
 
-void Recepcjonista::dodaj_karnet(Karnet* karnet) 
+void Recepcjonista::dodaj_karnet(Karnet* karnet) //metoda dodajaca karnet 
 {
 	_unnamed_Karnet_.push_back(karnet);
 }
