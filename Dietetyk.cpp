@@ -8,7 +8,8 @@ using namespace std;
 #include "Wizyta_u_dietetyla.h"
 #include "Pracownik.h"
 
-Dietetyk::Dietetyk(string a, string b, int id) {
+Dietetyk::Dietetyk(string a, string b, int id) //konstruktor klasy Dietetyk w ktorym zostaje generowane haslo automatycznie
+{
 	_imie = a;
 	_nazwisko = b;
 	_id = id;
@@ -19,13 +20,16 @@ Dietetyk::Dietetyk(string a, string b, int id) {
 	}
 	cout << "Haslo zostalo automatycznie wygenerowane: " << _haslo << endl;
 }
-int Dietetyk::get_id(){
+int Dietetyk::get_id()
+{
 	return _id;
 }
-string Dietetyk::get_haslo() {
+string Dietetyk::get_haslo() 
+{
 	return _haslo;
 }
-Karta_zdrowia* Dietetyk::wglad_do_karty_zdrowia(Klient k) {
+Karta_zdrowia* Dietetyk::wglad_do_karty_zdrowia(Klient k) //metoda, ktora umozliwia dietetykowi wglad do karty zdrowia Klienta,jesli jest ona podpieta to bedzie wyswietlac dane Klienta
+{
 	if (k._unnamed_Karta_zdrowia_ != nullptr)
 	{
 		cout << "Dane w karcie zdrowia: " << endl;
@@ -42,7 +46,7 @@ void Dietetyk::dodaj_wizyte(Wizyta_u_dietetyka* wizyta) {
 	_unnamed_Wizyta_u_dietetyka_.push_back(wizyta);
 }
 
-Dietetyk Dietetyk:: dodaj_do_planu_wizyt_dietetyka(Wizyta_u_dietetyka* wizyta, Dietetyk a) {
+Dietetyk Dietetyk:: dodaj_do_planu_wizyt_dietetyka(Wizyta_u_dietetyka* wizyta, Dietetyk a) //metoda dodajaca do planu Dietetyka wizyte tak aby nie pokrywaly sie z innymi godzinami i dniami zajetymi 
 		if (wizyta->get_dzien == 1)
 		{
 			for (int i = 0; i < a._plan_wizyt_pon.size(); i++)
@@ -120,7 +124,8 @@ Dietetyk Dietetyk:: dodaj_do_planu_wizyt_dietetyka(Wizyta_u_dietetyka* wizyta, D
 		
 };
 
-Dietetyk Dietetyk:: wyswietl_plan_tygodnia_dietetyka(Dietetyk a) {
+Dietetyk Dietetyk:: wyswietl_plan_tygodnia_dietetyka(Dietetyk a) //metoda wyswietlajaca plan tygodniowy dietetyka
+{
 	   cout << "Poniedziałek: " << endl;
 		for (int i = 0; i < a._plan_wizyt_pon.size(); i++)
 		{
