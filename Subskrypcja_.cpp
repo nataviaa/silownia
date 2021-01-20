@@ -11,7 +11,8 @@ Subskrypcja::Subskrypcja(int a, int b) {
 
 }
 
-void Subskrypcja::zawies() {
+void Subskrypcja::zawies() //zawieszenie Subskrybcji przez co oplata nie bedzie pobierana cyklicznie
+{
 	cout << "Oplata przestanie byc pobierana cyklicznie." << endl;
 	_dzien = 0;
 	_miesiac = 0;
