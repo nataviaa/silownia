@@ -13,7 +13,8 @@ using namespace std;
 #include "Harmonogram.h"
 
 
-Karta_zdrowia* Trener::wglad_do_karty_zdrowia(Klient k) {
+Karta_zdrowia* Trener::wglad_do_karty_zdrowia(Klient k) //wglad do karty zdrowia Klienta przez Trenera o ile jest podpieta
+{
 	if (k._unnamed_Karta_zdrowia_ != nullptr)
 	{
 		cout << "Dane w karcie zdrowia: " << endl;
@@ -27,11 +28,13 @@ Karta_zdrowia* Trener::wglad_do_karty_zdrowia(Klient k) {
 	return k._unnamed_Karta_zdrowia_;
 }
 
-void Trener::dodaj_trening(Trening_personalny* trening) {
+void Trener::dodaj_trening(Trening_personalny* trening) //metoda dodajaca trening personalny do Trenera
+{
 	_unnamed_Trening_personalny_.push_back(trening);
 }
 
-Trener Trener::dodaj_do_planu_trenera(Trening_personalny* trening, Trener t, Harmonogram a){
+Trener Trener::dodaj_do_planu_trenera(Trening_personalny* trening, Trener t, Harmonogram a)//metoda dodajaca trening personalny do harmonogramu trenera tak aby nie pokrywaly sie dni i godziny w planie  
+{
 	   
 	if (trening->get_dzien == 1)
 	{
@@ -101,7 +104,8 @@ Trener Trener::dodaj_do_planu_trenera(Trening_personalny* trening, Trener t, Har
 	return t;
 };
 
-Trener Trener::wyswietl_plan_tygodnia_trenera(Trener t) {
+Trener Trener::wyswietl_plan_tygodnia_trenera(Trener t) //metoda wyswietlajaca plan tygodniowy trenera 
+{
 	cout << "Poniedziałek: " << endl;
 	for (int i = 0; i < t._plan_wizyt_pon.size(); i++)
 	{
