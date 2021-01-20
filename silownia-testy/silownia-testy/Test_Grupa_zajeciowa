@@ -1,0 +1,29 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+#include ""       //podpięcie pliku GrupaZajeciowa.h
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+using namespace std;
+
+namespace Test_Grupa_zajeciowa
+{
+    TEST_CLASS(Test_Grupa_zajeciowa)
+    {
+    public:
+
+        TEST_METHOD(TestKonstruktora)
+        {
+           double _godzina=16.30;
+           int _liczba_osob=30;
+           int _sala=110;
+           int _dzien_tygodnia=5;
+           string _rodzaj_zajec="Yoga";
+           Grupa_zajeciowa grupa1(_godzina, _liczba_osob, _sala, _dzien_tygodnia, _rodzaj_zajec);
+           Assert::AreEqual(16.30, grupa1._godzina);
+           Assert::AreEqual(30, grupa1._liczba_osob);
+           Assert::AreEqual(5, grupa1._dzien_tygodnia);
+           Assert::AreEqual(110, grupa1._sala);
+           Assert::AreEqual("Yoga", grupa1._rodzaj_zajec);
+        }
+    };
+}

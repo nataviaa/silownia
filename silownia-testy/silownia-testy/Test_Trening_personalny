@@ -1,0 +1,26 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+#include 
+#include "../silownia_projekt/Trening_personalny.cpp"
+
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace TestTreningpersonalny
+{
+	TEST_CLASS(TestTreningpersonalny)
+	{
+	public:
+		
+		TEST_METHOD(TestMethod1)
+		{
+			string i = "wysoka";
+			string d = "poniedziałek";
+			double g= 17.40;
+			Trener _unnamed_Trener_();
+			Klient _unnamed_Klient_();
+			Trening_personalny tr(i, d, g);
+			Assert::AreEqual(g, tr.get_godzina());
+		}
+	};
+}
