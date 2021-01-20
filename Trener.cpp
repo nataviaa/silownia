@@ -13,6 +13,19 @@ using namespace std;
 #include "Harmonogram.h"
 
 
+Trener::Trener(string a, string b, int id) //konstruktor klasy Trener w ktorym zostaje generowane haslo automatycznie
+{
+	_imie = a;
+	_nazwisko = b;
+	_id = id;
+	char chars[] = "qwertyuiopasdfghjklzxcvbnm1234567890";
+	for (int i = 0; i < 6; i++)
+	{
+		_haslo += chars[rand() % 37];
+	}
+	cout << "Haslo zostalo automatycznie wygenerowane: " << _haslo << endl;
+}
+
 Karta_zdrowia* Trener::wglad_do_karty_zdrowia(Klient k) //wglad do karty zdrowia Klienta przez Trenera o ile jest podpieta
 {
 	if (k._unnamed_Karta_zdrowia_ != nullptr)
