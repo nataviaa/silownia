@@ -34,7 +34,7 @@ public:
 
 	Harmonogram(string);
 
-	void dodaj_grupe(Grupa_zajeciowa* );
+	void dodaj_grupe(Grupa_zajeciowa);
 
 	Harmonogram modyfikuj_harmonogram(Grupa_zajeciowa*, Grupa_zajeciowa*, Harmonogram*);
 

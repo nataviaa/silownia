@@ -26,7 +26,7 @@ vector <Trener*> vector_trener;
 vector <Dietetyk*> vector_dietetyk;
 vector <Recepcjonista*> vector_recepcjonista;
 vector <Klient*> vector_klient;
- Harmonogram *h1;
+Harmonogram *h1;
 void wybor_strefy();
 
 void recepcjonista(Recepcjonista*zalogowany) 
@@ -456,6 +456,8 @@ int main()
     tm t;
     localtime_s(&t, &czas);
 
+    Harmonogram h("miesiac");
+    h1 = &h;
     Recepcjonista r1("Eryk", "Broda", 1);
     vector_recepcjonista.push_back(&r1);
     Trener t1("Eryk", "Broda", 2);
@@ -468,7 +470,8 @@ int main()
     vector_dietetyk.push_back(&d1);
     Grupa_zajeciowa g1(8,10,1,1,"Yoga",&t1);
     Grupa_zajeciowa g2(10, 10, 1, 1, "Pilates", &t1);
-    h1->dodaj_grupe(&g1);
+    h1->dodaj_grupe(g1);
+    h1->dodaj_grupe(g2);
     //h1.stworz_harmonogram(&g1, &h1);
     
 

@@ -1,10 +1,10 @@
 #include <exception>
 #include <vector>
+#include <string>
 using namespace std;
 
 
-#include "Karnet.h"
-//#include "Pracownik->h"
+
 #include "Klient.h"
 #include "Grupa_zajeciowa.h"
 #include "Harmonogram.h"
@@ -16,25 +16,25 @@ Harmonogram::Harmonogram(string miesiac)
 	
 };
 
-void Harmonogram::dodaj_grupe(Grupa_zajeciowa* grupa) {
+void Harmonogram::dodaj_grupe(Grupa_zajeciowa grupa) {
 
-	int dzien = grupa->_dzien_tygodnia;
+	int dzien = grupa._dzien_tygodnia;
 	switch (dzien)
 	{
 	case 1:
-		_poniedzialek.push_back(grupa);
+		_poniedzialek.push_back(&grupa);
 		break;
 	case 2:
-		_wtorek.push_back(grupa);
+		_wtorek.push_back(&grupa);
 		break;
 	case 3:
-		_sroda.push_back(grupa);
+		_sroda.push_back(&grupa);
 		break;
 	case 4: 
-		_czwartek.push_back(grupa);
+		_czwartek.push_back(&grupa);
 		break;
 	case 5: 
-		_piatek.push_back(grupa);
+		_piatek.push_back(&grupa);
 		break;
 	}
 }
@@ -146,17 +146,17 @@ void Harmonogram::pokaz_harmonogram(Harmonogram* a) {
 	cout << "Poniedzialek: " << endl;
 	for (int i = 0; i < a->_poniedzialek.size(); i++)
 	{
-		cout << "Godzina: " << a->_poniedzialek[i]->get_godzina() << "Rodzaj zajec: " << a->_poniedzialek[i]->get_rodzaj() << a->_poniedzialek[i]->_sala << endl;
+		cout << "Godzina: " << a->_poniedzialek[i]->get_godzina() << " Rodzaj zajec: " << a->_poniedzialek[i]->get_rodzaj() <<" Sala: "<< a->_poniedzialek[i]->_sala << endl;
 	}
 	cout << "Wtorek: " << endl;
 	for (int i = 0; i < a->_wtorek.size(); i++)
 	{
-		cout << "Godzina: " << a->_wtorek[i]->get_godzina() << "Rodzaj zajec: " << a->_wtorek[i]->get_rodzaj() << "Sala: " << a->_wtorek[i]->_sala << endl;
+		cout << "Godzina: " << a->_wtorek[i]->get_godzina() << " Rodzaj zajec: " << a->_wtorek[i]->get_rodzaj() << " Sala: " << a->_wtorek[i]->_sala << endl;
 	}
 	cout << "Sroda: " << endl;
 	for (int i = 0; i < a->_sroda.size(); i++)
 	{
-		cout << "Godzina: " << a->_sroda[i]->get_godzina() << "Rodzaj zajec: " << a->_sroda[i]->get_rodzaj() << "Sala: " << a->_sroda[i]->_sala << endl;
+		cout << "Godzina: " << a->_sroda[i]->get_godzina() << " Rodzaj zajec: " << a->_sroda[i]->get_rodzaj() << " Sala: " << a->_sroda[i]->_sala << endl;
 	}
 	cout << "Czwartek: " << endl;
 	for (int i = 0; i < a->_czwartek.size(); i++)
