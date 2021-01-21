@@ -2,16 +2,15 @@
 using namespace std;
 
 #include "Karnet.h"
-#include "Recepcjonista.h"
+//#include "Recepcjonista.h"
 #include "Klient.h"
 
-Karnet::Karnet(bool a, int c,int d, int m, Recepcjonista* recepcjonista, Klient* klient)
+Karnet::Karnet(bool a, int c,int d, int m,Klient* klient)
 {
 	_zni¿ka_uczniowska = a;
 	_cena = c;
 	_dzien = d;
 	_miesiac = m;
-	_unnamed_Recepcjonista_ = recepcjonista;
 	_unnamed_Klient_ = klient;
 }
 
@@ -33,4 +32,7 @@ int Karnet::get_dzien()
 int Karnet::get_miesiac()
 {
 	return _miesiac;
+}
+Klient* Karnet::get_klient() {
+	return _unnamed_Klient_;
 }

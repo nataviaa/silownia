@@ -9,4 +9,3 @@ Dieta::Dieta(int k) {
 	_kalorycznosc = k;
 }
 
-

@@ -29,9 +29,8 @@ namespace TestWejściejednorazowe
 		{
 			int a = 7;
 			int b = 54;
-			Recepcjonista c("a","b",15);
 			Klient d("a", "b", 1778);
-			Wejscie_jednorazowe wj(a, b, &c, &d);
+			Wejscie_jednorazowe wj(a, b, &d);
 			Assert::AreEqual(a, wj.get_dzien());
 		
 		}

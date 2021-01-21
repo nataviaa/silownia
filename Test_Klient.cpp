@@ -29,7 +29,8 @@ namespace TestKlient
 			Klient k(a, b, c);
 
 			Assert::AreEqual(a, k.get_imie());
-
+			Assert::AreEqual(b, k.get_nazwisko());
+			Assert::AreEqual(c, k.get_rok_urodzenia()); 
 		}
 		TEST_METHOD(Test_zapis_do_grupy)
 		{

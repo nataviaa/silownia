@@ -18,16 +18,20 @@ class Trening_personalny
 private: 
 	string _intensywnosc;
 	int _dzieñ;
-	double _godzina;
+	int _godzina;
 
 public: 
 	Trener* _unnamed_Trener_;
 	Klient* _unnamed_Klient_;
-	Trening_personalny(int, double, string, Trener*, Klient*);
+	Trening_personalny(int, int, string, Trener*, Klient*);
+
+	
 
 	int get_dzien();
-	double get_godzina();
+	int get_godzina();
 	string get_intensywnosc();
+	Trener* get_trener();
+	Klient* get_klient();
 	
 };
 

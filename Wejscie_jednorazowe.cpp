@@ -1,10 +1,8 @@
 #include <exception>
-#include <vector>
 using namespace std;
 
 #include "Wejscie_jednorazowe.h"
-//#include "Karnet.h"
-#include "Klient.h"
+#include "Karnet.h"
 
 Wejscie_jednorazowe::Wejscie_jednorazowe(int a,int b, int c)
 {
@@ -20,6 +18,4 @@ int Wejscie_jednorazowe::get_dzien()
 int Wejscie_jednorazowe::get_cena() {
 	return _cena;
 }
-
-
 

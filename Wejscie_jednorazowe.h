@@ -1,15 +1,8 @@
 #include <exception>
 using namespace std;
 
-#ifndef __Wejscie_jednorazowe_h__
-#define __Wejscie_jednorazowe_h__
-
-//#include "Karnet.h"
-#include "Klient.h"
-
-//class Karnet;
-class Wejscie_jednorazowe;
-class Klient;
+#ifndef __Wejœcie_jednorazowe_h__
+#define __Wejœcie_jednorazowe_h__
 
 
 class Wejscie_jednorazowe
@@ -23,7 +16,6 @@ public:
 	int get_dzien();
 	int get_cena();
 	
-
 };
 
 #endif

@@ -10,14 +10,6 @@
 #include "../silownia_projekt/Grupa_zajeciowa.cpp"
 #include "../silownia_projekt/Wizyta_u_dietetyla.cpp"
 
-
-
-
-
-
-
-
-
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace TestKarnet
@@ -32,11 +24,12 @@ namespace TestKarnet
 			int b = 123;
 			int c = 4;
 			int d = 7;
-			Recepcjonista e("a","b",8);
 			Klient f("a","b",1775);
-			Karnet k(a, b, c, d, &e, &f);
+			Karnet k(a, b, c, d, &f);
 			Assert::AreEqual(a, k.get_znizka());
 			Assert::AreEqual(b, k.get_cena());
+			Assert::AreEqual(c, k.get_dzien());
+			Assert::AreEqual(d, k.get_miesiac());
 		}
 		
 	};

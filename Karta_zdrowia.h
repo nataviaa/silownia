@@ -23,9 +23,10 @@ public:
 	Trener* _unnamed_Trener_;
 	Dietetyk* _unnamed_Dietetyk_;
 
+
 	 Karta_zdrowia(int m, int w, string k, Klient* klient, Trener* trener);
 	 Karta_zdrowia(int m, int w, string k, Klient* klient, Dietetyk* dietetyk);
-
+	 Karta_zdrowia(int m, int w, string k, Klient* klient);
 };
 
 #endif

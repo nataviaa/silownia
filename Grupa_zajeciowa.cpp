@@ -1,25 +1,31 @@
 #include <exception>
 #include <vector>
+#include <string>
 using namespace std;
 
 #include "Grupa_zajeciowa.h"
 #include "Klient.h"
 #include "Trener.h"
 
+Grupa_zajeciowa::Grupa_zajeciowa(int g, int l, int s, int d, string rodzaj, Trener*trener) {
+	_godzina = g;
+	_liczba_osob = l;
+	_sala = s;
+	_dzien_tygodnia = d;
+	_rodzaj_zajec = rodzaj;
+	_unnamed_Trener_ = trener;
+}
+
 void Grupa_zajeciowa::dodaj_uczestnika(Klient k) {
 	_unnamed_Klient_.push_back(&k);
 	_liczba_osob++;
 }
 
-void Grupa_zajeciowa::usun_uczestnika(Klient k) {
-	throw "Not yet implemented";
+
+string Grupa_zajeciowa::get_rodzaj() {
+	return _rodzaj_zajec;
 }
 
-void Grupa_zajeciowa::podaj_godziny_zajec() {
-	throw "Not yet implemented";
-}
-
-void Grupa_zajeciowa::wypisz1()
-{ 
-	cout <<"Klient zapisal sie na: "<< _rodzaj_zajec <<"\nGodzina: "<< _godzina <<"\nDzien tygodnia: "<< _dzien_tygodnia <<"\nNumer sali: "<< _sala <<"\nLiczba osob w grupie: "<<_liczba_osob<< endl;
+int Grupa_zajeciowa::get_godzina() {
+	return _godzina;
 }
