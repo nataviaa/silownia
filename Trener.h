@@ -10,8 +10,8 @@ using namespace std;
 #include "Karta_zdrowia.h"
 #include "Grupa_zajeciowa.h"
 #include "Trening_personalny.h"
-#include "Pracownik.h"
 #include "Harmonogram.h"
+
 
 class Karta_zdrowia;
 class Grupa_zajeciowa;
@@ -19,6 +19,7 @@ class Wizyta_u_dietetyka;
 class Trening_personalny;
 class Pracownik;
 class Trener;
+class Harmonogram;
 
 class Trener 
 {
@@ -28,6 +29,7 @@ private:
 	string _imie;
 	string _nazwisko;
 	int _id;
+	string _haslo;
 
 public: 
 	
@@ -50,19 +52,20 @@ public:
 	Trener();
 	
 	Trener(string, string, int);
-
+	bool czy_wolny(int, double);
 	string get_imie();
 	string get_nazwisko();
 	int getID();
 	std::vector<Grupa_zajeciowa*> get_grupa();
 	std::vector<Trening_personalny*> get_trening_personalny();
+	string get_haslo();
 
 
 	void dodaj_trening(Trening_personalny*);
 
-	Trener dodaj_do_planu_trenera(Trening_personalny*, Trener, Harmonogram);
+	void dodaj_do_planu_trenera(Trening_personalny*, Trener*, Harmonogram*);
 
-	Trener wyswietl_plan_tygodnia_trenera(Trener);
+	void wyswietl_plan_tygodnia_trenera(Trener*);
 };
 
 #endif

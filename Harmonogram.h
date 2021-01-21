@@ -1,41 +1,48 @@
 #include <exception>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 #ifndef __Harmonogram_h__
 #define __Harmonogram_h__
 
 #include "Karnet.h"
-//#include "Pracownik.h"
 #include "Klient.h"
 #include "Grupa_zajeciowa.h"
+#include "Trener.h"
 
 class Harmonogram;
 class Grupa_zajeciowa;
+class Trener;
 
 
 class Harmonogram
 {
 public:
 	string _miesiac;
-	Trener _trener;
-	Grupa_zajeciowa poniedzialek[5];
-	Grupa_zajeciowa wtorek[5];
-	Grupa_zajeciowa sroda[5];
-	Grupa_zajeciowa czwartek[5];
-	Grupa_zajeciowa piatek[5];
+	
+	
+	std::vector<Grupa_zajeciowa*> _poniedzialek;
+	std::vector<Grupa_zajeciowa*> _wtorek;
+	std::vector<Grupa_zajeciowa*> _sroda;
+	std::vector<Grupa_zajeciowa*> _czwartek;
+	std::vector<Grupa_zajeciowa*> _piatek;
 
 
 
 
-	Harmonogram(string, Trener);
 
-	Harmonogram stworz_harmonogram(Grupa_zajeciowa, Harmonogram );
+	Harmonogram(string);
 
-	Harmonogram modyfikuj_harmonogram(Grupa_zajeciowa, Grupa_zajeciowa, Harmonogram);
+	void dodaj_grupe(Grupa_zajeciowa* );
 
-	Harmonogram usun_zajecia(Grupa_zajeciowa, Harmonogram);
+	Harmonogram modyfikuj_harmonogram(Grupa_zajeciowa*, Grupa_zajeciowa*, Harmonogram*);
 
+	Harmonogram usun_zajecia(Grupa_zajeciowa*, Harmonogram*);
+
+	void pokaz_harmonogram(Harmonogram*);
+
+	Grupa_zajeciowa wybierz_grupe(Harmonogram*);
 	
 
 };

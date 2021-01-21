@@ -9,14 +9,14 @@
 #include "Dietetyk.h"
 #include "Grupa_zajeciowa.h"
 #include "Karnet.h"
-#include "Karnet_miesięczny.h"
+#include "Karnet_miesieczny.h"
 #include "Karta_zdrowia.h"
 #include "Klient.h"
 #include "Recepcjonista.h"
 #include "Subskrypcja_.h"
 #include "Trener.h"
 #include "Trening_personalny.h"
-#include "Wejście_jednorazowe.h"
+#include "Wejscie_jednorazowe.h"
 #include "Wizyta_u_dietetyla.h"
 #include "Harmonogram.h"
 
@@ -26,10 +26,12 @@ vector <Trener*> vector_trener;
 vector <Dietetyk*> vector_dietetyk;
 vector <Recepcjonista*> vector_recepcjonista;
 vector <Klient*> vector_klient;
+ Harmonogram *h1;
+void wybor_strefy();
 
 void recepcjonista(Recepcjonista*zalogowany) 
 {
-    cout << "Nacisnij konkretny przycisk aby wybrac opcje:" << endl;
+    cout <<endl<< "Nacisnij konkretny przycisk aby wybrac opcje:" << endl;
     cout << "1.Wyswietl podpisane karnety z klientami." << endl;
     cout << "2.Stworz harmonogram." << endl;
     cout << "3.Modyfikuj harmonogram." << endl;
@@ -38,12 +40,12 @@ void recepcjonista(Recepcjonista*zalogowany)
     int a;
     cin >> a;
     
-    
+    recepcjonista(zalogowany);
 }
 
 void trener(Trener*zalogowany)
 {
-    cout << "Nacisnij konkretny przycisk aby wybrac opcje:" << endl;
+    cout <<endl<< "Nacisnij konkretny przycisk aby wybrac opcje:" << endl;
     cout << "1.Wyswietl swoje grupy zajeciowe." << endl;
     cout << "2.Wyswietl swoje treningi personalne." << endl;
     cout << "3.Wyswietl karty zdrowia swoich klientow." << endl;
@@ -86,11 +88,12 @@ void trener(Trener*zalogowany)
     case 4:break;
     case 5: 
         cout<<"Twoj grafik na ten tydzien: "<<endl;
-        wyswietl_plan_tygodnia_trenera(zalogowany);
+        zalogowany->wyswietl_plan_tygodnia_trenera(zalogowany);
     break;
     default:
         break;
     }
+    trener(zalogowany);
 }
 
 void dietetyk(Dietetyk*zalogowany)
@@ -127,17 +130,18 @@ void dietetyk(Dietetyk*zalogowany)
         break;
     case 3:break;
     case 4: 
-        wyswietl_plan_tygodnia_dietetyka(zalogowany);
+        zalogowany->wyswietl_plan_tygodnia_dietetyka(zalogowany);
     break;
     default:
         break;
     }
+    dietetyk(zalogowany);
 }
 void klient(Klient*zalogowany)
 {
     if (zalogowany->get_karnet_miesieczny() == nullptr&&zalogowany->get_subskrypcja()==nullptr&&zalogowany->get_wejscie_jednorazowe()==nullptr)
     {
-        cout << "Klient nie posiada kupionego karnetu." << endl;
+        cout <<endl<< "Klient nie posiada kupionego karnetu." << endl;
         cout << "Nacisnij konkretny przycisk aby wybrac opcje:" << endl;
         cout << "1. Kup karnet miesieczny." << endl;
         cout << "2. Kup jednorazowe wejscie." << endl;
@@ -165,7 +169,7 @@ void klient(Klient*zalogowany)
             tm t;
             localtime_s(&t, &czas);
             cout << "Karnet bedzie aktywny dnia: " << t.tm_mday << "." << t.tm_mon + 1 << "." << t.tm_year + 1900 << endl;
-            Wejscie_jednorazowe w(t.tm_wday, t.tm_mon + 1, 20);
+            Wejscie_jednorazowe w(t.tm_mday, t.tm_mon + 1, 20);
             zalogowany->set_wejscie_jednorazowe(&w);
         }
 
@@ -178,7 +182,7 @@ void klient(Klient*zalogowany)
             localtime_s(&t, &czas);
             cout << "Karnet bedzie aktywny od dnia: " << t.tm_mday << "." << t.tm_mon + 1 << "." << t.tm_year + 1900 << endl;
             cout << "Oplata bedzie pobierana " << t.tm_mday << " dnia kazdego miesiaca." << endl;
-            Subskrypcja s(t.tm_wday, t.tm_mon + 1);
+            Subskrypcja s(t.tm_mday, t.tm_mon + 1);
             zalogowany->set_subskrypcja(&s);
             
         }
@@ -192,15 +196,16 @@ void klient(Klient*zalogowany)
         
     }
     
-        cout << "Nacisnij konkretny przycisk aby wybrac opcje:" << endl;
+        cout << endl << "Nacisnij konkretny przycisk aby wybrac opcje:" << endl;
         cout << "1. Sprawdz waznosc swojego karnetu." << endl;
         cout << "2. Zapisz sie na zajecia grupowe." << endl;
         cout << "3. Zapisz sie na trening personalny." << endl;
         cout << "4. Zapisz sie do dietetyka." << endl;
-        cout << "5. Dodaj kartę zdrowia." << endl;
+        cout << "5. Dodaj karte zdrowia." << endl;
         cout << "6. Przedluz waznosc swojego karnetu." << endl;
         cout << "7. Wyswietl cennik." << endl;
         cout << "8. Wyswietl harmonogram prowadzaonych zajec grupowych." << endl;
+        cout << "9. Wyloguj sie." << endl;
        
         int a;
         cin >> a;
@@ -215,16 +220,86 @@ void klient(Klient*zalogowany)
             cout << endl;
                 break;
         case 2:
-            //wyswietl wszytskie grupy
-            //wybierz grupe
-            //zalogowany->zapisz_do_grupy(Grupa, *zalogowany);
+        {
+            Grupa_zajeciowa g = h1->wybierz_grupe(h1);
+            zalogowany->zapisz_do_grupy(&g, *zalogowany);
+        }
             break;
         case 3:
-            cout << "Wybierz date treningu: " << endl;
-            break;
+        {
+            int a, c;
+            double b;
+            cout << "Wybierz dzien tygodnia Twojego treningu: " << endl;
+            cout << "1. Poniedzialek" << endl;
+            cout << "2. Wtorek" << endl;
+            cout << "3. Sroda" << endl;
+            cout << "4. Czwartek" << endl;
+            cout << "5. Piatek" << endl;
+            cin >> a;
+            cout << "Wybierz godzine swojego treningu: " << endl;
+            cout << "8.00" << endl;
+            cout << "15.00" << endl;
+            cout << "17.00" << endl;
+            cout << "19.00" << endl;
+            cout << "21.30" << endl;
+            cin >> b;
+            cout << "Na czym chcesz sie skoncentrowac podczas treningu?" << endl;
+            string rodzaj1 = "1. Poprawa wytrzymalosci.";
+            string rodzaj2 = "2. Wysmuklenie sylwetki.";
+            string rodzaj3 = "3. Rozbudowa tkanki miesniowej.";
+            cout << rodzaj1 << endl << rodzaj2 << endl << rodzaj3 << endl;
+            cin >> c;
+
+            for (int i = 0; i < vector_trener.size(); i++)
+            {
+                if (vector_trener[i]->czy_wolny(a, b) == true)
+                {
+                    if (c == 1)
+                    {
+                        zalogowany->zapisz_na_trening(a, b, rodzaj1, vector_trener[i] , zalogowany, h1);
+                    }
+                    if (c == 2)
+                    {
+                        zalogowany->zapisz_na_trening(a, b, rodzaj2, vector_trener[i] , zalogowany, h1);
+                    }
+                    if (c == 3)
+                    {
+                        zalogowany->zapisz_na_trening(a, b, rodzaj3, vector_trener[i] , zalogowany, h1);
+                    }
+                    
+                }
+            }
+        }
+         break;
         case 4:
-            cout << "Wybierz date wizyty: " << endl;
-            break;
+            int a, c;
+            double b;
+            cout << "Wybierz dzien tygodnia Twojej wizyty: " << endl;
+            cout << "1. Poniedzialek" << endl;
+            cout << "2. Wtorek" << endl;
+            cout << "3. Sroda" << endl;
+            cout << "4. Czwartek" << endl;
+            cout << "5. Piatek" << endl;
+            cin >> a;
+            cout << "Wybierz godzine swojego treningu: " << endl;
+            cout << "15.00" << endl;
+            cout << "16.00" << endl;
+            cout << "17.00" << endl;
+            cout << "18.00" << endl;
+            cout << "19.00" << endl;
+            cin >> b;
+        
+
+            for (int i = 0; i < vector_dietetyk.size(); i++)
+            {
+                if (vector_dietetyk[i]->czy_wolny(a, b) == true)
+                {
+                        zalogowany->zapisz_do_dietetyka(a, b, 50, vector_dietetyk[i], zalogowany);
+                    
+                }
+            }
+        
+        break;
         case 5:
         {
             cout << "Wprowadz podstawowe dane zdrowotne." << endl;
@@ -255,11 +330,17 @@ void klient(Klient*zalogowany)
                 break;
         case 8: 
             cout<<"Aktualny harmonogram zajec: "<<endl;
-            //pokaz_harmonogram(Harmonogram);
+            h1->pokaz_harmonogram(h1);
+            
                 break;
+        case 9:
+            wybor_strefy();
+            break;
         default:
             break;
         }
+
+        klient(zalogowany);
 }
 void strefa_pracownika() 
 {
@@ -268,33 +349,33 @@ void strefa_pracownika()
     cin >> id;
     for (int i = 0; i < vector_recepcjonista.size(); i++)
     {
-        if (vector_recepcjonista[i]->get_id() == id)
+        if (vector_recepcjonista[i]->get_iD() == id)
         {   
             cout << "Podaj haslo: " << endl;
             string haslo;
             cin >> haslo;
             if (vector_recepcjonista[i]->get_haslo() == haslo)
             {
-                cout << "Logowanie zokonczoe sukcesem." << endl;
+                cout << "logowanie zokonczoe sukcesem." << endl;
                 recepcjonista(vector_recepcjonista[i]);
                 break;
                 
             }
-            else cout << "Bledne haslo." << endl;
+            else cout << "bledne haslo." << endl;
 
         }
 
     }
     for (int i = 0; i < vector_trener.size(); i++)
     {
-        if (vector_trener[i]->get_id() == id)
+        if (vector_trener[i]->getID() == id)
         {
             string haslo;
             cout << "Podaj haslo:" << endl;
             cin >> haslo;
             if (vector_trener[i]->get_haslo() == haslo)
             {
-                cout << "Logowanie zokonczoe sukcesem." << endl;
+                cout << "Logowanie zakonczoe sukcesem." << endl;
                 trener(vector_trener[i]);
                 break;
             }
@@ -312,7 +393,7 @@ void strefa_pracownika()
             cin >> haslo;
             if (vector_dietetyk[i]->get_haslo() == haslo)
             {
-                cout << "Logowanie zokonczoe sukcesem." << endl;
+                cout << "Logowanie zakonczoe sukcesem." << endl;
                 dietetyk(vector_dietetyk[i]);
                 break;
             }
@@ -379,12 +460,18 @@ int main()
     vector_recepcjonista.push_back(&r1);
     Trener t1("Eryk", "Broda", 2);
     vector_trener.push_back(&t1);
+    Trener t2("Damian","Puch",4);
+    vector_trener.push_back(&t2);
     Klient k1("Andrzej", "Giza", 1990);
     vector_klient.push_back(&k1);
-    Dietetyk d1("Eryk", "Broda", 3);
+    Dietetyk d1("Eryk", "Brogowski", 3);
     vector_dietetyk.push_back(&d1);
+    Grupa_zajeciowa g1(8,10,1,1,"Yoga",&t1);
+    Grupa_zajeciowa g2(10, 10, 1, 1, "Pilates", &t1);
+    h1->dodaj_grupe(&g1);
+    //h1.stworz_harmonogram(&g1, &h1);
+    
 
-    //system("cls");
     wybor_strefy();
    
     

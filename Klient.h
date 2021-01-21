@@ -12,10 +12,10 @@ using namespace std;
 #include "Trening_personalny.h"
 #include "Grupa_zajeciowa.h"
 #include "Karnet.h"
-#include "Karnet_miesiêczny.h"
-#include "Wejœcie_jednorazowe.h"
+#include "Karnet_miesieczny.h"
+#include "Wejscie_jednorazowe.h"
 #include "Subskrypcja_.h"
-#include "Harmonogram.h";
+#include "Harmonogram.h"
 
 class Karta_zdrowia;
 class Wizyta_u_dietetyka;
@@ -49,7 +49,7 @@ public:
 	Karta_zdrowia* _unnamed_Karta_zdrowia_;
 	void zapisz_do_grupy(Grupa_zajeciowa*,Klient);
 	void zapisz_do_dietetyka(int, double, int, Dietetyk*,Klient*);
-	void zapisz_na_trening(int,double,string,Trener*,Klient*,Harmonogram);
+	void zapisz_na_trening(int,double,string,Trener*,Klient*,Harmonogram*);
 	void uaktualnij_dane(string, string, string, string);
 	void dodaj_karte_zdrowia(Karta_zdrowia);
 	void wglad_w_karte_zdrowia();

@@ -4,7 +4,7 @@ using namespace std;
 
 #include "Recepcjonista.h"
 #include "Karnet.h"
-#include "Pracownik.h"
+//#include "Pracownik.h"
 #include "Klient.h"
 
 Recepcjonista::Recepcjonista(string imie, string nazwisko, int i) {
@@ -36,6 +36,7 @@ string Recepcjonista::get_nazwisko() {
 int Recepcjonista::get_iD() {
 	return _iD;
 }
-string Recepcjonista::get_haslo() {
+string Recepcjonista::get_haslo()
+{
 	return _haslo;
 }

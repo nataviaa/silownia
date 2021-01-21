@@ -6,7 +6,7 @@ using namespace std;
 #define __Recepcjonista_h__
 
 #include "Karnet.h"
-#include "Pracownik.h"
+//#include "Pracownik.h"
 #include "Klient.h"
 
 class Karnet;
@@ -22,6 +22,7 @@ public:
 	string _imie;
 	string _nazwisko;
 	int _iD;
+	std::vector<Karnet*> _unnamed_Karnet_;
 	string _haslo;
 
 	Recepcjonista(string, string, int);

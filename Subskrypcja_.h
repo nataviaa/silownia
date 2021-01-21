@@ -11,11 +11,11 @@ class Subskrypcja_;
 
 class Subskrypcja
 {
-private: 
+private:
 	int _miesiac;
 	int _dzien;
 
-public: 
+public:
 	Subskrypcja(int, int);
 
 	void zawies();

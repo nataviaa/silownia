@@ -23,7 +23,7 @@ Klient::Klient(string imie , string nazwisko, int rok) {
 	{
 		_haslo += chars[rand() % 37];
 	}
-	cout << "Haslo zostalo automatycznie wygenerowane: " << _haslo << endl;
+	cout << "Haslo zostalo automatycznie wygenerowane dla klienta: " << _haslo << endl;
 }
 void Klient::zapisz_do_grupy(Grupa_zajeciowa* grupa, Klient klient) {
 	//_unnamed_Grupa_zajeciowa.push_back(grupa);
@@ -35,14 +35,14 @@ void Klient::zapisz_do_dietetyka(int dzien, double godzina, int cena, Dietetyk* 
 	Wizyta_u_dietetyka wizyta(dzien, godzina, cena, dietetyk, klient);//tworzymy wizyte
 	dietetyk->dodaj_wizyte(&wizyta);//dodajemy wizyte do dietetyka
 	_unnamed_Wizyta_u_dietetyka_.push_back(&wizyta);//dodajemy wizyte do klienta
-	dietetyk->dodaj_do_planu_wizyt_dietetyka(&wizyta, *dietetyk);//dodajemy wizyte do grafiku dietetyka
+	dietetyk->dodaj_do_planu_wizyt_dietetyka(&wizyta, dietetyk);//dodajemy wizyte do grafiku dietetyka
 	cout << "Klient " << _imie << "zostal zapisany na wizyte do dietetyka." << endl;
 }
-void Klient::zapisz_na_trening(int dzien, double godzina, string rodzaj, Trener* trener, Klient* klient) {
+void Klient::zapisz_na_trening(int dzien, double godzina, string rodzaj, Trener* trener, Klient* klient, Harmonogram *harmonogram) {
 	Trening_personalny trening(dzien, godzina, rodzaj, trener, klient);
 	trener->dodaj_trening(&trening);
 	_unnamed_Trening_personalny_.push_back(&trening);
-	trener->dodaj_do_planu_trenera(&trening, *trener,harmonogram);//dodajemy trening do grafiku trenera
+	trener->dodaj_do_planu_trenera(&trening, trener, harmonogram);//dodajemy trening do grafiku trenera
 	cout << "Klient " << _imie << "zostal zapisany na trening personalny" << endl;
 
 }

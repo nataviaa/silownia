@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-#include "Karnet_miesiêczny.h"
+#include "Karnet_miesieczny.h"
 #include "Karnet.h"
 #include"Klient.h"
 
@@ -24,7 +24,7 @@ void Karnet_miesieczny::przedluz()
 	else if (_miesiac == 1|| _miesiac == 3 || _miesiac == 5 || _miesiac == 7|| _miesiac == 8 || _miesiac == 10|| _miesiac == 12)
 	{
 
-		if (1<_dzien <= 31)
+		if (1<_dzien && _dzien <= 31)
 		{
 			_miesiac++;
 			_dzien--;

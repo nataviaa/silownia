@@ -9,15 +9,17 @@ using namespace std;
 
 // #include "Klient.h"
 // #include "Trener.h"
+#include "Harmonogram.h"
 
 class Klient;
 class Trener;
 class Grupa_zajeciowa;
+class Harmonogram;
 
 class Grupa_zajeciowa
 {
 public: 
-	double _godzina;
+	int _godzina;
 	string _rodzaj_zajec;//np Yoga, k-box
 	int  _liczba_osob;
 	int  _sala;
@@ -27,15 +29,12 @@ public:
 	vector <Klient*> _unnamed_Klient_;
 	Trener* _unnamed_Trener_;
 	Grupa_zajeciowa();
-	Grupa_zajeciowa(double g, int l, int s, int d, string rodzaj) :
-		_godzina(g), _liczba_osob(l), _sala(s), _dzien_tygodnia(d), _rodzaj_zajec(rodzaj) {}
+	Grupa_zajeciowa(int g, int l, int s, int d, string rodzaj, Trener*);
 	void dodaj_uczestnika(Klient);
-
-	void usun_uczestnika(Klient);
-
-	void podaj_godziny_zajec();
 	
 	string get_rodzaj();
+
+	int get_godzina();
 	
 };
 
